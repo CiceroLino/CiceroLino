@@ -19,7 +19,7 @@
   <li>Java (OOP, data structure and algorithm, for college stuff)</li>
   <li>HTML, CSS and Bootstrap</li>
   <li>Javascript and typescript</li>
-  <li>I'm study angular and react frameworks</li>
+  <li>I'm practicing angular and express frameworks</li>
   <li>I build REST frameworks with Insomnia</li>
   <li>I know a bit of docker</li>
   <li>Python, be simple is good (language is a tool, it's good considerate others options)</li>
