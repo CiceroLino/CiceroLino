@@ -1,21 +1,25 @@
 <h1 align="center">Hi and welcome 👋, I'm Cícero Lino!</h1>
 <br>
 
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=cicerolino&theme=dark&hide_border=true" width="400" height="180">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cicerolino&layout=compact&theme=dark&hide_border=true" width="400" height="180">
+</p>
+
 <h2 align="center">Personal info</h2>
 <ul>
-  <li>I'm 23 years old</li>
+  <li>I'm 23 years old 🤖</li>
   <li>I'm a computer science student of the <a href="https://al.unit.br">Group Tirantentes University at Maceió</a></li>
   <li>I'll be <strong>strongest</strong> full stack developer</li>
 </ul>
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=cicerolino&theme=dark&hide_border=true" width="400">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cicerolino&layout=compact&theme=dark&hide_border=true" width="400">
-</p>
+<div align="center">
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"> <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge"> <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
+</div>
 
 <h2 align="center">My skills</h2>
 <ul>
-  <li>Linux (arch and debian based) and Windows (two useful swords)</li>
+  <li>Linux (arch and debian based) and Windows (two useful swords ⚔️)</li>
   <li>Java (OOP, data structure and algorithm, for college stuff)</li>
   <li>HTML, CSS and Bootstrap</li>
   <li>Javascript and typescript</li>
