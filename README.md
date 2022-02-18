@@ -1,10 +1,11 @@
 <h1 align="center">Hi and welcome 👋, I'm Cícero Lino!</h1>
 <br>
 
-<p align="center">
+<div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=cicerolino&theme=dark&hide_border=true" width="400" height="180">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cicerolino&layout=compact&theme=dark&hide_border=true" width="400" height="180">
-</p>
+  <img src="https://github-readme-stats.vercel.app/api?username=cicerolino&show_icons=true&theme=dark&hide_border=true" width="400" height="180">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cicerolino&layout=compact&theme=dark&hide_border=true&langs_count=8)" width="400" height="200">
+</div>
 
 <h2 align="center">Personal info</h2>
 <ul>
