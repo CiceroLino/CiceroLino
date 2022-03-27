@@ -1,43 +1,44 @@
-<h1 align="center">Hi and welcome 👋, I'm Cícero Lino!</h1>
-<br>
-
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&lines=Hi+and+welcome+%F0%9F%91%8B%2C+I'm+C%C3%ADcero+Lino!;I'm+a+full+stack+developer!)](https://git.io/typing-svg)
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=cicerolino&theme=dark&hide_border=true" width="400" height="180">
   <img src="https://github-readme-stats.vercel.app/api?username=cicerolino&show_icons=true&theme=dark&hide_border=true" width="400" height="180">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cicerolino&layout=compact&theme=dark&hide_border=true&langs_count=8)" width="400" height="200">
 </div>
 
-<h2 align="center">Personal info</h2>
-<ul>
-  <li>I'm 23 years old 🤖</li>
-  <li>I'm a computer science student of the <a href="https://al.unit.br">Group Tirantentes University at Maceió</a></li>
-  <li>I'll be <strong>strongest</strong> full stack developer</li>
-</ul>
-
-<div align="center">
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"> <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge"> <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"> <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
+<hr>
+<div style="display: inline_block"><br>
+  <!-- Lang with types-->
+  <img align="center" alt="Typescript" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
+  <img align="center" alt="Python" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+  
+  <!-- Basic web dev -->
+  <img align="center" alt="Th-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="Th-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="Th-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  
+  <!-- Libraries and frameworks -->
+  <img align="center" alt="Node" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+  <img align="center" alt="React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="Nest" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" />
+  <img align="center" alt="Django" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
+  <img align="center" alt="Angular" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg">  
+  <img align="center" alt="Bootstrap" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg">  
+  
+  <!-- Databases -->
+  <img align="center" alt="postgres" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+  
+  <!-- Tools -->
+  <img align="center" alt="linux" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
+  <img align="center" alt="git" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+  <img align="center" alt="docker" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+  <img align="center" alt="figma" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
 </div>
+<hr>
 
-<h2 align="center">My skills</h2>
-<ul>
-  <li>Linux (arch and debian based) and Windows (two useful swords ⚔️)</li>
-  <li>Java (OOP, data structure and algorithm, for college stuff)</li>
-  <li>HTML, CSS and Bootstrap</li>
-  <li>Javascript and typescript</li>
-  <li>I'm practicing angular and express frameworks</li>
-  <li>I build REST frameworks with Insomnia</li>
-  <li>I know a bit of docker</li>
-  <li>Python, be simple is good (language is a tool, it's good considerate others options)</li>
-</ul>
-
-<h2 align="center">My hobbies</h2>
-<ul>
-  <li>Duolingo for expand my culture</li>
-  <li>Marvel universe for my geek side</li>
-  <li>Japanese culture, someday I'll be visit Tokyo! :)</li>
-  <li>Coding stuff for myself</li>
-  <li>Lofi music is the best for relax and coding</li>
-</ul>
+  <h3 align="center">About me</h3>
+    I'm 23 years old<br>
+    I'm a computer science student of the <a href="https://al.unit.br">Group Tirantentes University at Maceió</a><br>
+    I'm currently working with typescript for banckend (nestjs) and frontend (angular)<br>
 
 <h2 align="center">My contact</h2>
 <div align="center">
