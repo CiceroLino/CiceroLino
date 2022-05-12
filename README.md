@@ -1,8 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?center=true&vCenter=true&lines=Hi+and+welcome+%F0%9F%91%8B%2C+I'm+C%C3%ADcero+Lino!;I'm+a+full+stack+developer!)](https://git.io/typing-svg)
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=cicerolino&theme=dark&hide_border=true" width="400" height="180">
-  <img src="https://github-readme-stats.vercel.app/api?username=cicerolino&show_icons=true&theme=dark&hide_border=true" width="400" height="180">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cicerolino&layout=compact&theme=dark&hide_border=true&langs_count=8)" width="400" height="200">
+  <img src="https://media2.giphy.com/media/RMwgs5kZqkRyhF24KK/giphy.gif" width="400" height="200">
 </div>
 
 <hr>
