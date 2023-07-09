@@ -5,11 +5,11 @@
 </samp>
 
 ```typescript
-const Cicero = {
+export const Cicero = {
     age: 24,
-    country: 'Brazil',
-    knowledge: ['Typescript', 'Nodejs', 'AWS', 'SQL database', 'Frontend', 'Backend'],
-    hobbies: ['Anime', 'Games', 'RPG', 'Sci-fi', 'Computer'],
-    whoami: ['Computer Science Student', 'Software Engineer', 'Linux User']
+    languages: ['Portuguese', 'English'],
+    knowledge: ['Angular', 'Typescript', 'Nodejs backend', 'AWS Cloud Formation', 'SQL and NosSQL database'],
+    hobbies: ['Anime', 'Games', 'RPG', 'Sci-fi', 'Technology'],
+    whoami: ['Geek', 'Computer Science Student', 'Software Engineer', 'Linux User']
 };
 ```
