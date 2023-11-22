@@ -41,9 +41,9 @@ const Cicero: SoftwareDeveloper = {
 };
 
 export async function getResponse(Cicero: SoftwareDeveloper): Promise<Working> {
-  const coffee = await getCoffee();
-  const computer = await turnOnTheComputer();
-  const wifi = await getConnetion();
+  let coffee = await getCoffee();
+  let computer = await turnOnTheComputer();
+  let wifi = await getConnetion();
 
   return getBackToWork(Cicero, coffee, computer, wifi);
 }
