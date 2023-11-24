@@ -45,7 +45,7 @@ export async function getResponse(Cicero: SoftwareDeveloper): Promise<Working> {
   let computer = await turnOnTheComputer();
   let wifi = await getConnetion();
 
-  return getBackToWork(Cicero, coffee, computer, wifi);
+  return await getBackToWork(Cicero, coffee, computer, wifi);
 }
 
 // This code works only in my machine 😎😎
