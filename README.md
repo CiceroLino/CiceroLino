@@ -32,6 +32,13 @@ const Cicero: SoftwareDeveloper = {
     'Message Broker',
     'A bit of frontend',
   ],
+  hobbies: [
+    'Update my knowledge about tech and science',
+    'Upgrade my english and japanese',
+    'Watch Animes',
+    'Listen music',
+    'Read mangas and comics',
+  ],
   whoami: [
     'Geek',
     'Computer Science Student',
@@ -40,12 +47,12 @@ const Cicero: SoftwareDeveloper = {
   ],
 };
 
-export async function getResponse(Cicero: SoftwareDeveloper): Promise<Working> {
+export async function getResponse(programmer: typeof Cicero): Promise<Working> {
   let coffee = await getCoffee();
   let computer = await turnOnTheComputer();
   let wifi = await getConnetion();
 
-  return await getBackToWork(Cicero, coffee, computer, wifi);
+  return await getBackToWork(programmer, coffee, computer, wifi);
 }
 
 // This code works only in my machine 😎😎
