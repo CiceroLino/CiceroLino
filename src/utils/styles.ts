@@ -6,13 +6,15 @@ export const getThemeStyles = (theme: Theme) => ({
     secondary: theme === "dark" ? "#00ff99" : "#00a86b",
     background: theme === "dark" ? "#000000" : "#ffffff",
     surface:
-      theme === "dark" ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.05)",
-    text: theme === "dark" ? "#f5f5f5" : "#333333",
-    textSecondary: theme === "dark" ? "#ccc" : "#666",
+      theme === "dark"
+        ? "rgba(255, 255, 255, 0.05)"
+        : "rgba(255, 255, 255, 0.95)",
+    text: theme === "dark" ? "#f5f5f5" : "#1a1a1a",
+    textSecondary: theme === "dark" ? "#ccc" : "#444",
     border:
-      theme === "dark" ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)",
+      theme === "dark" ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.15)",
     overlay:
-      theme === "dark" ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.9)",
+      theme === "dark" ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.98)",
   },
 
   gradients: {
@@ -23,22 +25,22 @@ export const getThemeStyles = (theme: Theme) => ({
     surface:
       theme === "dark"
         ? "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))"
-        : "linear-gradient(135deg, rgba(0,0,0,0.02), rgba(0,0,0,0.05))",
+        : "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9))",
   },
 
   shadows: {
     small:
       theme === "dark"
         ? "0 2px 8px rgba(0, 191, 255, 0.2)"
-        : "0 2px 8px rgba(0, 122, 204, 0.1)",
+        : "0 2px 8px rgba(0, 122, 204, 0.15)",
     medium:
       theme === "dark"
         ? "0 8px 32px rgba(0, 191, 255, 0.3)"
-        : "0 8px 32px rgba(0, 122, 204, 0.15)",
+        : "0 8px 32px rgba(0, 122, 204, 0.2)",
     large:
       theme === "dark"
         ? "0 16px 64px rgba(0, 191, 255, 0.4)"
-        : "0 16px 64px rgba(0, 122, 204, 0.2)",
+        : "0 16px 64px rgba(0, 122, 204, 0.25)",
   },
 
   transitions: {

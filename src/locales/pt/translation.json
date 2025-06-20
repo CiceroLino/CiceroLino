@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Skills",
+    "opensource": "Open Source",
+    "portfolio": "Portfólio",
+    "blog": "Blog",
+    "contact": "Contato",
+    "theme": {
+      "light": "☀️ Claro",
+      "dark": "🌙 Escuro"
+    }
+  },
+  "hero": {
+    "title": "Full Stack Developer",
+    "description": "Desenvolvedor apaixonado por criar soluções inovadoras com React, Node.js e AWS. Especializado em aplicações web escaláveis e experiências de usuário excepcionais.",
+    "buttons": {
+      "portfolio": "Ver Portfólio",
+      "hire": "Contratar"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "experience": {
+      "title": "Experiência Profissional",
+      "role": "Full Stack Developer",
+      "experience": "2+ anos de experiência desenvolvendo aplicações web escaláveis",
+      "specializations": "Especializações: React, Node.js, TypeScript, AWS, NestJS, PostgreSQL",
+      "availability": "Disponível para: CLT, PJ, Cooperado, Freelancer"
+    },
+    "education": {
+      "title": "Formação & Objetivos",
+      "degree": "Ciência da Computação - Em formação, com foco em desenvolvimento de software",
+      "objective": "Contribuir para projetos desafiadores que impactem positivamente a sociedade",
+      "methodology": "Desenvolvimento ágil, código limpo e arquitetura escalável"
+    }
+  },
+  "skills": {
+    "title": "Skills & Tecnologias"
+  },
+  "portfolio": {
+    "title": "Portfólio",
+    "loading": "Carregando Portfólio...",
+    "error": "Erro ao carregar portfólio",
+    "noProjects": "Nenhum projeto encontrado. Verifique a configuração do GitHub.",
+    "buttons": {
+      "github": "GitHub",
+      "demo": "Ver Demo"
+    }
+  },
+  "blog": {
+    "title": "Blog (Em Breve)",
+    "construction": "🚧 Em Construção 🚧",
+    "description": "Em breve você encontrará artigos sobre desenvolvimento web, arquitetura de software, e insights sobre as últimas tecnologias."
+  },
+  "contact": {
+    "title": "Vamos Trabalhar Juntos?",
+    "availability": {
+      "title": "Disponibilidade",
+      "description": "Disponível para projetos freelance e oportunidades de contratação"
+    },
+    "modalities": {
+      "title": "Modalidades",
+      "description": "CLT, PJ, Cooperado, Freelancer"
+    },
+    "buttons": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn"
+    },
+    "message": "Estou sempre aberto a novas oportunidades e colaborações interessantes. Vamos conversar sobre como posso ajudar no seu próximo projeto!"
+  }
+} 

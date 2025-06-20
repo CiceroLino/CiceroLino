@@ -1,11 +1,11 @@
-import { GitHubRepoData, Project } from "../types";
+import { Project, Repository, GitHubStats } from "../types";
 import { appConfig } from "../config/app.config";
 
 class GitHubService {
   private baseUrl = "https://api.github.com";
   private username = appConfig.githubUsername;
 
-  async getRepositories(): Promise<GitHubRepoData[]> {
+  async getRepositories(): Promise<Repository[]> {
     try {
       const response = await fetch(
         `${this.baseUrl}/users/${this.username}/repos?sort=updated&per_page=100`
@@ -17,6 +17,33 @@ class GitHubService {
     } catch (error) {
       console.error("Error fetching repositories:", error);
       return [];
+    }
+  }
+
+  async getUserStats(): Promise<GitHubStats> {
+    try {
+      const response = await fetch(`${this.baseUrl}/users/${this.username}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch user stats");
+      }
+      const userData = await response.json();
+
+      return {
+        public_repos: userData.public_repos,
+        followers: userData.followers,
+        following: userData.following,
+        created_at: userData.created_at,
+        updated_at: userData.updated_at,
+      };
+    } catch (error) {
+      console.error("Error fetching user stats:", error);
+      return {
+        public_repos: 0,
+        followers: 0,
+        following: 0,
+        created_at: "",
+        updated_at: "",
+      };
     }
   }
 
@@ -41,7 +68,17 @@ class GitHubService {
         github: repo.html_url,
         live: repo.homepage || undefined,
         featured: repo.stargazers_count > 0,
-        githubData: repo,
+        githubData: {
+          name: repo.name,
+          description: repo.description,
+          html_url: repo.html_url,
+          homepage: repo.homepage,
+          language: repo.language,
+          stargazers_count: repo.stargazers_count,
+          forks_count: repo.forks_count,
+          updated_at: repo.updated_at,
+          topics: repo.topics,
+        },
       }));
     } catch (error) {
       console.error("Error fetching portfolio repositories:", error);
@@ -75,7 +112,7 @@ class GitHubService {
       .join(" ");
   }
 
-  private extractTechnologies(repo: GitHubRepoData): string[] {
+  private extractTechnologies(repo: Repository): string[] {
     const technologies: string[] = [];
 
     // Adiciona linguagem principal

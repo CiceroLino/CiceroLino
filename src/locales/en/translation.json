@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "opensource": "Open Source",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact",
+    "theme": {
+      "light": "☀️ Light",
+      "dark": "🌙 Dark"
+    }
+  },
+  "hero": {
+    "title": "Full Stack Developer",
+    "description": "Passionate developer creating innovative solutions with React, Node.js and AWS. Specialized in scalable web applications and exceptional user experiences.",
+    "buttons": {
+      "portfolio": "View Portfolio",
+      "hire": "Hire Me"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "experience": {
+      "title": "Professional Experience",
+      "role": "Full Stack Developer",
+      "experience": "2+ years of experience developing scalable web applications",
+      "specializations": "Specializations: React, Node.js, TypeScript, AWS, NestJS, PostgreSQL",
+      "availability": "Available for: CLT, PJ, Cooperative, Freelancer"
+    },
+    "education": {
+      "title": "Education & Goals",
+      "degree": "Computer Science - In progress, focused on software development",
+      "objective": "Contribute to challenging projects that positively impact society",
+      "methodology": "Agile development, clean code and scalable architecture"
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "loading": "Loading Portfolio...",
+    "error": "Error loading portfolio",
+    "noProjects": "No projects found. Check GitHub configuration.",
+    "buttons": {
+      "github": "GitHub",
+      "demo": "View Demo"
+    }
+  },
+  "blog": {
+    "title": "Blog (Coming Soon)",
+    "construction": "🚧 Under Construction 🚧",
+    "description": "Soon you will find articles about web development, software architecture, and insights about the latest technologies."
+  },
+  "contact": {
+    "title": "Let's Work Together?",
+    "availability": {
+      "title": "Availability",
+      "description": "Available for freelance projects and hiring opportunities"
+    },
+    "modalities": {
+      "title": "Modalities",
+      "description": "CLT, PJ, Cooperative, Freelancer"
+    },
+    "buttons": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn"
+    },
+    "message": "I'm always open to new opportunities and interesting collaborations. Let's talk about how I can help with your next project!"
+  }
+} 

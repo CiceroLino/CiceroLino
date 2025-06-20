@@ -17,16 +17,39 @@ export interface Project {
   githubData?: GitHubRepoData;
 }
 
-export interface GitHubRepoData {
+export interface Repository {
+  id: number;
   name: string;
-  description: string;
+  description: string | null;
   html_url: string;
-  homepage: string;
-  language: string;
+  homepage: string | null;
+  language: string | null;
   stargazers_count: number;
   forks_count: number;
   updated_at: string;
   topics: string[];
+  private: boolean;
+  fork: boolean;
+}
+
+export interface GitHubRepoData {
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+  language: string | null;
+  stargazers_count: number;
+  forks_count: number;
+  updated_at: string;
+  topics: string[];
+}
+
+export interface GitHubStats {
+  public_repos: number;
+  followers: number;
+  following: number;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface ContactInfo {

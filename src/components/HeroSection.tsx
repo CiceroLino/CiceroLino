@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "../contexts/ThemeContext";
 import { getThemeStyles } from "../utils/styles";
 import { appConfig } from "../config/app.config";
@@ -10,6 +11,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
   const { theme } = useTheme();
+  const { t } = useTranslation();
   const styles = getThemeStyles(theme);
   const { personalInfo, contactInfo } = appConfig;
 
@@ -32,6 +34,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
         textAlign: "center",
         padding: "0 1rem",
         color: styles.colors.text,
+        backgroundColor: "transparent",
+        position: "relative",
+        zIndex: 11,
       }}
     >
       <motion.div
@@ -43,10 +48,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
           style={{
             fontSize: "4rem",
             marginBottom: "1rem",
-            background: styles.gradients.primary,
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
             fontWeight: "bold",
+            transition: styles.transitions.medium,
+            display: "inline-block",
+            lineHeight: "1.2",
+            color: styles.colors.primary,
+            textShadow: `0 0 20px ${styles.colors.primary}40`,
           }}
         >
           {personalInfo.name}
@@ -66,7 +73,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
             fontWeight: "300",
           }}
         >
-          {personalInfo.title}
+          {t("hero.title")}
         </h2>
         <p
           style={{
@@ -77,7 +84,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
             color: styles.colors.textSecondary,
           }}
         >
-          {personalInfo.description}
+          {t("hero.description")}
         </p>
       </motion.div>
 
@@ -116,7 +123,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
           }}
           onClick={() => onSectionClick("portfolio")}
         >
-          Ver Portfólio
+          {t("hero.buttons.portfolio")}
         </motion.button>
 
         <motion.button
@@ -141,7 +148,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
           }}
           onClick={() => onSectionClick("contact")}
         >
-          Contratar
+          {t("hero.buttons.hire")}
         </motion.button>
       </motion.div>
 
