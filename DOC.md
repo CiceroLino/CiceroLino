@@ -175,6 +175,44 @@ Cada componente segue o padrão:
 3. Configure no `app.config.ts` se necessário
 4. Importe no `App.tsx`
 
+### Seção Jornada (Timeline)
+
+A seção **Jornada** apresenta de forma visual e cronológica sua trajetória profissional, acadêmica e principais conquistas. Ela utiliza um layout vertical simples, com cards empilhados, ícones temáticos e uma linha do tempo à esquerda, garantindo ótima visualização em qualquer tema e dispositivo.
+
+**Principais características:**
+
+- Layout vertical, responsivo e centralizado
+- Cards com informações de cargo, empresa, período, descrição, conquistas e tecnologias
+- Ícones circulares à esquerda de cada evento, com cor temática
+- Linha vertical conectando os eventos
+- Chamada para ação ao final, incentivando contato
+
+**Como personalizar:**
+
+- Os eventos da timeline estão definidos no componente `src/components/TimelineSection.tsx` no array `timelineEvents`.
+- Cada evento possui os campos: `year`, `month`, `title`, `company`, `description`, `technologies`, `type`, `icon`, `achievements`.
+- Para adicionar, remover ou editar eventos, basta modificar esse array.
+- Os ícones utilizam classes do Font Awesome (ex: `fas fa-briefcase`).
+- As cores dos eventos são definidas pela função `getEventColor` de acordo com o tipo (`work`, `education`, `opensource`, `project`).
+
+**Exemplo de evento:**
+
+```js
+{
+  year: "2024",
+  month: "Jan - Presente",
+  title: "Full Stack Developer Senior",
+  company: "TechCorp Solutions",
+  description: "Liderando desenvolvimento de aplicações web escaláveis...",
+  technologies: ["React", "Node.js", "AWS"],
+  type: "work",
+  icon: "fas fa-briefcase",
+  achievements: ["Redução de 40% no tempo de carregamento"]
+}
+```
+
+A seção é totalmente customizável e pode ser expandida para incluir outros tipos de eventos ou estilos conforme sua necessidade.
+
 ### Customizando Estilos
 
 Edite `src/utils/styles.ts` para:
