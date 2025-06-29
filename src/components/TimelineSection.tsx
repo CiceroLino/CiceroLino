@@ -189,156 +189,167 @@ export const TimelineSection: React.FC = () => {
         <div
           style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}
         >
-          {timelineEvents.map((event, idx) => {
-            const eventColor = getEventColor(event.type);
-            return (
-              <div
-                key={event.title + event.year}
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  position: "relative",
-                  zIndex: 2,
-                }}
-              >
-                {/* Ícone circular */}
+          {timelineEvents.map(
+            (
+              event
+              // idx
+            ) => {
+              const eventColor = getEventColor(event.type);
+              return (
                 <div
+                  key={event.title + event.year}
                   style={{
-                    width: "64px",
-                    height: "64px",
-                    borderRadius: "50%",
-                    background: eventColor,
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    boxShadow: styles.shadows.small,
-                    color: styles.colors.background,
-                    fontSize: "2rem",
-                    marginRight: "1.5rem",
-                    flexShrink: 0,
-                    border: `4px solid ${styles.colors.background}`,
+                    alignItems: "flex-start",
+                    position: "relative",
+                    zIndex: 2,
                   }}
                 >
-                  <i className={event.icon} />
-                </div>
-                {/* Card */}
-                <div
-                  style={{
-                    background: styles.colors.background,
-                    border: `1px solid ${styles.colors.border}`,
-                    borderRadius: "14px",
-                    boxShadow: styles.shadows.small,
-                    padding: "1.5rem 1.5rem 1.5rem 1rem",
-                    minWidth: 0,
-                    flex: 1,
-                  }}
-                >
+                  {/* Ícone circular */}
                   <div
                     style={{
+                      width: "64px",
+                      height: "64px",
+                      borderRadius: "50%",
+                      background: eventColor,
                       display: "flex",
                       alignItems: "center",
-                      gap: "1rem",
-                      marginBottom: "0.5rem",
+                      justifyContent: "center",
+                      boxShadow: styles.shadows.small,
+                      color: styles.colors.background,
+                      fontSize: "2rem",
+                      marginRight: "1.5rem",
+                      flexShrink: 0,
+                      border: `4px solid ${styles.colors.background}`,
                     }}
                   >
-                    <span style={{ fontWeight: 700, color: eventColor }}>
-                      {event.year}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: "0.95rem",
-                        color: styles.colors.textSecondary,
-                        background: `${eventColor}18`,
-                        padding: "0.2rem 0.7rem",
-                        borderRadius: "8px",
-                      }}
-                    >
-                      {event.month}
-                    </span>
+                    <i className={event.icon} />
                   </div>
-                  <h3
-                    style={{
-                      fontSize: "1.2rem",
-                      color: styles.colors.text,
-                      fontWeight: 600,
-                      marginBottom: "0.2rem",
-                    }}
-                  >
-                    {event.title}
-                  </h3>
+                  {/* Card */}
                   <div
                     style={{
-                      fontSize: "1rem",
-                      color: styles.colors.secondary,
-                      fontWeight: 500,
-                      marginBottom: "0.7rem",
+                      background: styles.colors.background,
+                      border: `1px solid ${styles.colors.border}`,
+                      borderRadius: "14px",
+                      boxShadow: styles.shadows.small,
+                      padding: "1.5rem 1.5rem 1.5rem 1rem",
+                      minWidth: 0,
+                      flex: 1,
                     }}
                   >
-                    {event.company}
-                  </div>
-                  <p
-                    style={{
-                      fontSize: "0.98rem",
-                      color: styles.colors.textSecondary,
-                      marginBottom: "0.8rem",
-                    }}
-                  >
-                    {event.description}
-                  </p>
-                  {event.achievements && (
-                    <ul
+                    <div
                       style={{
-                        listStyle: "none",
-                        padding: 0,
-                        margin: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "1rem",
+                        marginBottom: "0.5rem",
+                      }}
+                    >
+                      <span style={{ fontWeight: 700, color: eventColor }}>
+                        {event.year}
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "0.95rem",
+                          color: styles.colors.textSecondary,
+                          background: `${eventColor}18`,
+                          padding: "0.2rem 0.7rem",
+                          borderRadius: "8px",
+                        }}
+                      >
+                        {event.month}
+                      </span>
+                    </div>
+                    <h3
+                      style={{
+                        fontSize: "1.2rem",
+                        color: styles.colors.text,
+                        fontWeight: 600,
+                        marginBottom: "0.2rem",
+                      }}
+                    >
+                      {event.title}
+                    </h3>
+                    <div
+                      style={{
+                        fontSize: "1rem",
+                        color: styles.colors.secondary,
+                        fontWeight: 500,
                         marginBottom: "0.7rem",
                       }}
                     >
-                      {event.achievements.map((ach, i) => (
-                        <li
-                          key={i}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "0.5rem",
-                            color: eventColor,
-                            fontSize: "0.93rem",
-                          }}
-                        >
-                          <i
-                            className="fas fa-check-circle"
-                            style={{ fontSize: "0.9rem" }}
-                          />
-                          <span style={{ color: styles.colors.textSecondary }}>
-                            {ach}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <div
-                    style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}
-                  >
-                    {event.technologies.map((tech) => (
-                      <span
-                        key={tech}
+                      {event.company}
+                    </div>
+                    <p
+                      style={{
+                        fontSize: "0.98rem",
+                        color: styles.colors.textSecondary,
+                        marginBottom: "0.8rem",
+                      }}
+                    >
+                      {event.description}
+                    </p>
+                    {event.achievements && (
+                      <ul
                         style={{
-                          background: `${eventColor}18`,
-                          color: eventColor,
-                          padding: "0.2rem 0.7rem",
-                          borderRadius: "8px",
-                          fontSize: "0.85rem",
-                          fontWeight: 500,
+                          listStyle: "none",
+                          padding: 0,
+                          margin: 0,
+                          marginBottom: "0.7rem",
                         }}
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        {event.achievements.map((ach, i) => (
+                          <li
+                            key={i}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "0.5rem",
+                              color: eventColor,
+                              fontSize: "0.93rem",
+                            }}
+                          >
+                            <i
+                              className="fas fa-check-circle"
+                              style={{ fontSize: "0.9rem" }}
+                            />
+                            <span
+                              style={{ color: styles.colors.textSecondary }}
+                            >
+                              {ach}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <div
+                      style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        gap: "0.5rem",
+                      }}
+                    >
+                      {event.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          style={{
+                            background: `${eventColor}18`,
+                            color: eventColor,
+                            padding: "0.2rem 0.7rem",
+                            borderRadius: "8px",
+                            fontSize: "0.85rem",
+                            fontWeight: 500,
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            }
+          )}
         </div>
       </div>
       {/* Call to Action */}

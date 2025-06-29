@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Repository } from "../types";
+import { type Repository } from "../types";
 import { githubService } from "../services/github.service";
 
 export const useGitHubRepos = () => {
