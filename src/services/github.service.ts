@@ -1,4 +1,4 @@
-import { Project, Repository, GitHubStats } from "../types";
+import { type Project, type Repository, type GitHubStats } from "../types";
 import { appConfig } from "../config/app.config";
 
 class GitHubService {

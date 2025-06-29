@@ -14,7 +14,7 @@
     }
   },
   "hero": {
-    "title": "Full Stack Developer",
+    "title": "Desenvolvedor Full Stack",
     "description": "Desenvolvedor apaixonado por criar soluções inovadoras com React, Node.js e AWS. Especializado em aplicações web escaláveis e experiências de usuário excepcionais.",
     "buttons": {
       "portfolio": "Ver Portfólio",
@@ -25,7 +25,7 @@
     "title": "Sobre Mim",
     "experience": {
       "title": "Experiência Profissional",
-      "role": "Full Stack Developer",
+      "role": "Desenvolvedor Full Stack",
       "experience": "2+ anos de experiência desenvolvendo aplicações web escaláveis",
       "specializations": "Especializações: React, Node.js, TypeScript, AWS, NestJS, PostgreSQL",
       "availability": "Disponível para: CLT, PJ, Cooperado, Freelancer"

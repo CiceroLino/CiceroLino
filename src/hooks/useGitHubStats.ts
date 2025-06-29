@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { GitHubStats } from "../types";
+import { type GitHubStats } from "../types";
 import { githubService } from "../services/github.service";
 
 export const useGitHubStats = () => {

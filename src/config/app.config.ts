@@ -1,4 +1,4 @@
-import { AppConfig } from "../types";
+import { type AppConfig } from "../types";
 
 export const appConfig: AppConfig = {
   personalInfo: {
@@ -7,7 +7,7 @@ export const appConfig: AppConfig = {
     description:
       "Desenvolvedor apaixonado por criar soluções inovadoras com React, Node.js e AWS. Especializado em aplicações web escaláveis e experiências de usuário excepcionais.",
     experience:
-      "2+ anos de experiência desenvolvendo aplicações web escaláveis",
+      "3+ anos de experiência desenvolvendo aplicações web escaláveis",
     education:
       "Ciência da Computação - Em formação, com foco em desenvolvimento de software",
     availability: ["CLT", "PJ", "Cooperado", "Freelancer"],
@@ -19,13 +19,13 @@ export const appConfig: AppConfig = {
   },
 
   contactInfo: {
-    email: "cicero.lino@example.com",
-    whatsapp: "5511999999999",
-    linkedin: "https://linkedin.com/in/cicero-lino",
-    github: "https://github.com/cicero-lino",
+    email: "cicerolino@gmail.com",
+    whatsapp: "5582991926406",
+    linkedin: "https://linkedin.com/in/cicerolinoeneto",
+    github: "https://github.com/CiceroLino",
   },
 
-  githubUsername: "cicero-lino",
+  githubUsername: "CiceroLino",
 
   portfolioRepos: [
     "ecommerce-platform",

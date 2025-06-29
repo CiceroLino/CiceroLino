@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { useTheme } from "../contexts/ThemeContext";
 import { getThemeStyles } from "../utils/styles";
 
 export const DownloadCV: React.FC = () => {
   const { theme } = useTheme();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const styles = getThemeStyles(theme);
 
   const handleDownloadCV = () => {

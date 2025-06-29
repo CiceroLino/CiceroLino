@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { Navbar } from "./components/Navbar";
@@ -57,7 +58,8 @@ const BackgroundVideo: React.FC = () => {
         }}
       >
         <source
-          src="/coverr-coding-sequences-9906-1080p.mp4"
+          // src="/coverr-coding-sequences-9906-1080p.mp4"
+          src="/coverr-sun-shining-over-the-ocean-2178-1080p.mp4"
           type="video/mp4"
         />
         Seu navegador não suporta vídeos.
