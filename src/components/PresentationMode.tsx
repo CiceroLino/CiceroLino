@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 // import { useTranslation } from "react-i18next";
 import { useTheme } from "../contexts/ThemeContext";
 import { getThemeStyles } from "../utils/styles";
+import { LazyImage } from "./LazyImage";
 
 interface Slide {
   id: number;
@@ -209,15 +210,28 @@ export const PresentationMode: React.FC = () => {
                   justifyContent: "center",
                   margin: "0 auto 2rem auto",
                   border: `3px solid ${slides[currentSlide].color}`,
+                  overflow: "hidden",
                 }}
               >
-                <i
-                  className={slides[currentSlide].icon}
-                  style={{
-                    fontSize: "3rem",
-                    color: slides[currentSlide].color,
-                  }}
-                />
+                {currentSlide === 0 ? (
+                  <LazyImage
+                    src="https://avatars.githubusercontent.com/u/53065315?v=4"
+                    alt="Avatar de Cicero Lino"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "50%",
+                    }}
+                  />
+                ) : (
+                  <i
+                    className={slides[currentSlide].icon}
+                    style={{
+                      fontSize: "3rem",
+                      color: slides[currentSlide].color,
+                    }}
+                  />
+                )}
               </motion.div>
 
               <motion.h2
