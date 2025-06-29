@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Project } from "../types";
-import { githubService } from "../services/github.service";
+import { useState, useEffect } from 'react';
+import type { Project } from '../types';
+import { githubService } from '../services/github.service';
 
 export const usePortfolio = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -11,13 +11,12 @@ export const usePortfolio = () => {
     const fetchProjects = async () => {
       try {
         setLoading(true);
-        const portfolioProjects =
-          await githubService.getPortfolioRepositories();
+        const portfolioProjects = await githubService.getPortfolioRepositories();
         setProjects(portfolioProjects);
         setError(null);
       } catch (err) {
-        setError("Erro ao carregar projetos do portfólio");
-        console.error("Error fetching portfolio:", err);
+        setError('Erro ao carregar projetos do portfólio');
+        console.error('Error fetching portfolio:', err);
       } finally {
         setLoading(false);
       }
