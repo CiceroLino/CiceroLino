@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { Skill } from "../types";
-import { githubService } from "../services/github.service";
-import { appConfig } from "../config/app.config";
+import { useState, useEffect } from 'react';
+import type { Skill } from '../types';
+import { githubService } from '../services/github.service';
+import { appConfig } from '../config/app.config';
 
 export const useSkills = () => {
   const [skills, setSkills] = useState<Skill[]>(appConfig.skills);
@@ -14,7 +14,7 @@ export const useSkills = () => {
       const languageStats = await githubService.getSkillsFromRepositories();
 
       // Atualiza skills existentes com dados do GitHub
-      const updatedSkills = appConfig.skills.map((skill) => {
+      const updatedSkills = appConfig.skills.map(skill => {
         const githubCount = languageStats[skill.name] || 0;
         // Calcula nível baseado no número de repositórios + nível base
         const newLevel = Math.min(100, skill.level + githubCount * 5);
@@ -28,8 +28,8 @@ export const useSkills = () => {
       setSkills(updatedSkills);
       setError(null);
     } catch (err) {
-      setError("Erro ao atualizar skills do GitHub");
-      console.error("Error updating skills:", err);
+      setError('Erro ao atualizar skills do GitHub');
+      console.error('Error updating skills:', err);
     } finally {
       setLoading(false);
     }

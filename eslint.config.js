@@ -5,13 +5,15 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import react from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
 import prettier from 'eslint-config-prettier';
+import tsParser from '@typescript-eslint/parser';
 
 export default tseslint.config(
-  { ignores: ['build', 'dist', 'node_modules'] },
+  { ignores: ['build', 'dist', 'node_modules', '**/*.d.ts'] },
   {
     name: 'base-config',
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
+      parser: tsParser,
       ecmaVersion: 2020,
       sourceType: 'module',
       globals: globals.browser,
@@ -35,5 +37,5 @@ export default tseslint.config(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
-  prettier, // aplica as regras do prettier para desativar conflitos
+  prettier,
 );
