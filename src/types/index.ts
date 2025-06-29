@@ -2,7 +2,7 @@ export interface Skill {
   name: string;
   level: number;
   color: string;
-  category: "frontend" | "backend" | "devops" | "database" | "tools";
+  category: 'frontend' | 'backend' | 'devops' | 'database' | 'tools';
 }
 
 export interface Project {
@@ -69,7 +69,7 @@ export interface PersonalInfo {
   methodologies: string[];
 }
 
-export type Theme = "dark" | "light";
+export type Theme = 'dark' | 'light';
 
 export interface ThemeContextType {
   theme: Theme;

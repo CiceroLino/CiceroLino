@@ -39,12 +39,7 @@ const cicero: Readonly<SoftwareDeveloper> = {
     'Listen to music',
     'Read manga and comics',
   ] as const,
-  whoami: [
-    'Geek',
-    'Computer Science Student',
-    'Software Engineer',
-    'Linux User',
-  ] as const,
+  whoami: ['Geek', 'Computer Science Student', 'Software Engineer', 'Linux User'] as const,
 };
 
 export async function getWorkingStatus(programmer: SoftwareDeveloper): Promise<WorkingStatus> {
@@ -64,5 +59,5 @@ export async function getWorkingStatus(programmer: SoftwareDeveloper): Promise<W
 
 // This code works on all machines, not just mine! 😎🚀
 ```
- 
+
 <img align="right" src="https://pa1.aminoapps.com/7514/9dc211dbf4b9bcc1a1348c975bd642ad45ddaeffr1-480-270_hq.gif" alt="Lofi vibe" />

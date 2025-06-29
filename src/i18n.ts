@@ -1,9 +1,9 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-import translationEN from "./locales/en/translation.json";
-import translationPT from "./locales/pt/translation.json";
+import translationEN from './locales/en/translation.json';
+import translationPT from './locales/pt/translation.json';
 
 const resources = {
   en: {
@@ -19,7 +19,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "pt",
+    fallbackLng: 'pt',
     debug: false,
 
     interpolation: {
@@ -27,8 +27,8 @@ i18n
     },
 
     detection: {
-      order: ["localStorage", "navigator"],
-      caches: ["localStorage"],
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
     },
   });
 

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 interface LazyImageProps {
   src: string;
@@ -30,8 +30,8 @@ export const LazyImage: React.FC<LazyImageProps> = ({
       },
       {
         threshold: 0.1,
-        rootMargin: "50px",
-      }
+        rootMargin: '50px',
+      },
     );
 
     if (imgRef.current) {
@@ -49,8 +49,8 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     <div
       ref={imgRef}
       style={{
-        position: "relative",
-        overflow: "hidden",
+        position: 'relative',
+        overflow: 'hidden',
         ...style,
       }}
       className={className}
@@ -60,13 +60,13 @@ export const LazyImage: React.FC<LazyImageProps> = ({
         src={placeholder}
         alt=""
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 0,
           left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          filter: "blur(10px)",
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          filter: 'blur(10px)',
         }}
         animate={{
           opacity: isLoaded ? 0 : 1,
@@ -80,9 +80,9 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           src={src}
           alt={alt}
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
           }}
           onLoad={handleLoad}
           initial={{ opacity: 0, scale: 1.1 }}

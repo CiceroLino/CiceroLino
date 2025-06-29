@@ -72,20 +72,20 @@ Edite `src/config/app.config.ts` para personalizar:
 ```typescript
 export const appConfig: AppConfig = {
   personalInfo: {
-    name: "Seu Nome",
-    title: "Sua Profissão",
+    name: 'Seu Nome',
+    title: 'Sua Profissão',
     // ... outras informações
   },
   contactInfo: {
-    email: "seu@email.com",
-    whatsapp: "5511999999999",
-    linkedin: "https://linkedin.com/in/seu-perfil",
-    github: "https://github.com/seu-usuario",
+    email: 'seu@email.com',
+    whatsapp: '5511999999999',
+    linkedin: 'https://linkedin.com/in/seu-perfil',
+    github: 'https://github.com/seu-usuario',
   },
-  githubUsername: "seu-usuario",
+  githubUsername: 'seu-usuario',
   portfolioRepos: [
-    "repo-1",
-    "repo-2",
+    'repo-1',
+    'repo-2',
     // ... repositórios para incluir no portfólio
   ],
 };
@@ -97,8 +97,8 @@ As skills são configuradas em `app.config.ts` e podem ser atualizadas dinamicam
 
 ```typescript
 skills: [
-  { name: "React", level: 90, color: "#61DAFB", category: "frontend" },
-  { name: "Node.js", level: 85, color: "#339933", category: "backend" },
+  { name: 'React', level: 90, color: '#61DAFB', category: 'frontend' },
+  { name: 'Node.js', level: 85, color: '#339933', category: 'backend' },
   // ... outras skills
 ];
 ```
@@ -251,7 +251,7 @@ import {
   turnOnComputer,
   getConnection,
   getBackToWork,
-} from "./shared/utils/environment";
+} from './shared/utils/environment';
 
 interface SoftwareDeveloper {
   readonly age: number;
@@ -261,36 +261,29 @@ interface SoftwareDeveloper {
   readonly whoami: readonly string[];
 }
 
-type WorkingStatus = "productive" | "distracted" | "offline";
+type WorkingStatus = 'productive' | 'distracted' | 'offline';
 
 const cicero: Readonly<SoftwareDeveloper> = {
   age: 24,
-  languages: ["Portuguese", "English", "Japanese"] as const, // Still trying to learn Japanese
+  languages: ['Portuguese', 'English', 'Japanese'] as const, // Still trying to learn Japanese
   knowledge: [
-    "Mostly Backend",
-    "Mostly SQL Database",
-    "Serverless & Cloud Formation",
-    "Message Broker",
-    "A bit of frontend",
+    'Mostly Backend',
+    'Mostly SQL Database',
+    'Serverless & Cloud Formation',
+    'Message Broker',
+    'A bit of frontend',
   ] as const,
   hobbies: [
-    "Update my knowledge about tech and science",
-    "Upgrade my English and Japanese",
-    "Watch Anime",
-    "Listen to music",
-    "Read manga and comics",
+    'Update my knowledge about tech and science',
+    'Upgrade my English and Japanese',
+    'Watch Anime',
+    'Listen to music',
+    'Read manga and comics',
   ] as const,
-  whoami: [
-    "Geek",
-    "Computer Science Student",
-    "Software Engineer",
-    "Linux User",
-  ] as const,
+  whoami: ['Geek', 'Computer Science Student', 'Software Engineer', 'Linux User'] as const,
 };
 
-export async function getWorkingStatus(
-  programmer: SoftwareDeveloper
-): Promise<WorkingStatus> {
+export async function getWorkingStatus(programmer: SoftwareDeveloper): Promise<WorkingStatus> {
   try {
     const [coffee, computer, wifi] = await Promise.all([
       getCoffee(),
@@ -300,8 +293,8 @@ export async function getWorkingStatus(
 
     return await getBackToWork(programmer, coffee, computer, wifi);
   } catch (error) {
-    console.error("Error getting working status:", error);
-    return "offline";
+    console.error('Error getting working status:', error);
+    return 'offline';
   }
 }
 

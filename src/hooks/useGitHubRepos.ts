@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { type Repository } from "../types";
-import { githubService } from "../services/github.service";
+import { useState, useEffect } from 'react';
+import { type Repository } from '../types';
+import { githubService } from '../services/github.service';
 
 export const useGitHubRepos = () => {
   const [repos, setRepos] = useState<Repository[]>([]);
@@ -15,8 +15,8 @@ export const useGitHubRepos = () => {
         setRepos(repositories);
         setError(null);
       } catch (err) {
-        setError("Erro ao carregar repositórios do GitHub");
-        console.error("Error fetching repos:", err);
+        setError('Erro ao carregar repositórios do GitHub');
+        console.error('Error fetching repos:', err);
       } finally {
         setLoading(false);
       }

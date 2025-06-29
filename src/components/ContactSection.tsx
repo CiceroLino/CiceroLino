@@ -1,9 +1,9 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { useTheme } from "../contexts/ThemeContext";
-import { getThemeStyles } from "../utils/styles";
-import { appConfig } from "../config/app.config";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from '../contexts/ThemeContext';
+import { getThemeStyles } from '../utils/styles';
+import { appConfig } from '../config/app.config';
 
 export const ContactSection: React.FC = () => {
   const { theme } = useTheme();
@@ -12,20 +12,14 @@ export const ContactSection: React.FC = () => {
   const { contactInfo } = appConfig;
 
   const handleEmailClick = () => {
-    window.open(
-      `mailto:${contactInfo.email}?subject=Proposta de Trabalho`,
-      "_blank"
-    );
+    window.open(`mailto:${contactInfo.email}?subject=Proposta de Trabalho`, '_blank');
   };
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      "Olá! Vi seu portfólio e gostaria de conversar sobre uma oportunidade de trabalho."
+      'Olá! Vi seu portfólio e gostaria de conversar sobre uma oportunidade de trabalho.',
     );
-    window.open(
-      `https://wa.me/${contactInfo.whatsapp}?text=${message}`,
-      "_blank"
-    );
+    window.open(`https://wa.me/${contactInfo.whatsapp}?text=${message}`, '_blank');
   };
 
   return (
@@ -40,9 +34,8 @@ export const ContactSection: React.FC = () => {
       }}
       style={{
         ...commonStyles.section,
-        backgroundColor:
-          theme === "dark" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.9)",
-        position: "relative",
+        backgroundColor: theme === 'dark' ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.9)',
+        position: 'relative',
         zIndex: 11,
       }}
     >
@@ -51,27 +44,27 @@ export const ContactSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         style={{
-          fontSize: "3rem",
-          marginBottom: "3rem",
-          textAlign: "center",
-          fontWeight: "bold",
+          fontSize: '3rem',
+          marginBottom: '3rem',
+          textAlign: 'center',
+          fontWeight: 'bold',
           transition: styles.transitions.medium,
-          display: "inline-block",
-          lineHeight: "1.2",
+          display: 'inline-block',
+          lineHeight: '1.2',
           color: styles.colors.primary,
           textShadow: `0 0 20px ${styles.colors.primary}40`,
         }}
       >
-        {t("contact.title")}
+        {t('contact.title')}
       </motion.h2>
 
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "3rem",
-          maxWidth: "1000px",
-          width: "100%",
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '3rem',
+          maxWidth: '1000px',
+          width: '100%',
         }}
       >
         {/* Informações de Disponibilidade */}
@@ -82,49 +75,49 @@ export const ContactSection: React.FC = () => {
           style={{
             ...commonStyles.card,
             backgroundColor: styles.colors.background,
-            padding: "2rem",
+            padding: '2rem',
             boxShadow: styles.shadows.medium,
             border: `1px solid ${styles.colors.border}`,
           }}
         >
           <h3
             style={{
-              fontSize: "1.5rem",
-              marginBottom: "1rem",
+              fontSize: '1.5rem',
+              marginBottom: '1rem',
               color: styles.colors.primary,
-              fontWeight: "600",
+              fontWeight: '600',
             }}
           >
-            {t("contact.availability.title")}
+            {t('contact.availability.title')}
           </h3>
           <p
             style={{
-              fontSize: "1rem",
-              lineHeight: "1.6",
+              fontSize: '1rem',
+              lineHeight: '1.6',
               color: styles.colors.textSecondary,
-              marginBottom: "1.5rem",
+              marginBottom: '1.5rem',
             }}
           >
-            {t("contact.availability.description")}
+            {t('contact.availability.description')}
           </p>
           <h4
             style={{
-              fontSize: "1.2rem",
-              marginBottom: "1rem",
+              fontSize: '1.2rem',
+              marginBottom: '1rem',
               color: styles.colors.secondary,
-              fontWeight: "600",
+              fontWeight: '600',
             }}
           >
-            {t("contact.modalities.title")}
+            {t('contact.modalities.title')}
           </h4>
           <p
             style={{
-              fontSize: "1rem",
-              lineHeight: "1.6",
+              fontSize: '1rem',
+              lineHeight: '1.6',
               color: styles.colors.textSecondary,
             }}
           >
-            {t("contact.modalities.description")}
+            {t('contact.modalities.description')}
           </p>
         </motion.div>
 
@@ -136,67 +129,65 @@ export const ContactSection: React.FC = () => {
           style={{
             ...commonStyles.card,
             backgroundColor: styles.colors.background,
-            padding: "2rem",
+            padding: '2rem',
             boxShadow: styles.shadows.medium,
             border: `1px solid ${styles.colors.border}`,
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.5rem",
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.5rem',
           }}
         >
           <h3
             style={{
-              fontSize: "1.5rem",
-              marginBottom: "1rem",
+              fontSize: '1.5rem',
+              marginBottom: '1rem',
               color: styles.colors.primary,
-              fontWeight: "600",
+              fontWeight: '600',
             }}
           >
             Entre em Contato
           </h3>
           <p
             style={{
-              fontSize: "1rem",
-              lineHeight: "1.6",
+              fontSize: '1rem',
+              lineHeight: '1.6',
               color: styles.colors.textSecondary,
-              marginBottom: "1.5rem",
+              marginBottom: '1.5rem',
             }}
           >
-            {t("contact.message")}
+            {t('contact.message')}
           </p>
 
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
-          >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <motion.button
               onClick={handleEmailClick}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
               style={{
                 backgroundColor: styles.colors.primary,
-                border: "none",
-                borderRadius: "8px",
-                padding: "1rem 2rem",
+                border: 'none',
+                borderRadius: '8px',
+                padding: '1rem 2rem',
                 color: styles.colors.background,
-                fontWeight: "600",
-                cursor: "pointer",
-                fontSize: "1.1rem",
+                fontWeight: '600',
+                cursor: 'pointer',
+                fontSize: '1.1rem',
                 transition: styles.transitions.medium,
                 boxShadow: styles.shadows.small,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "0.5rem",
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
               }}
-              onMouseEnter={(e) => {
+              onMouseEnter={e => {
                 e.currentTarget.style.boxShadow = styles.shadows.medium;
               }}
-              onMouseLeave={(e) => {
+              onMouseLeave={e => {
                 e.currentTarget.style.boxShadow = styles.shadows.small;
               }}
             >
               <i className="fas fa-envelope" />
-              {t("contact.buttons.email")}
+              {t('contact.buttons.email')}
             </motion.button>
 
             <motion.button
@@ -204,30 +195,30 @@ export const ContactSection: React.FC = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
               style={{
-                backgroundColor: "#25D366",
-                border: "none",
-                borderRadius: "8px",
-                padding: "1rem 2rem",
-                color: "white",
-                fontWeight: "600",
-                cursor: "pointer",
-                fontSize: "1.1rem",
+                backgroundColor: '#25D366',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '1rem 2rem',
+                color: 'white',
+                fontWeight: '600',
+                cursor: 'pointer',
+                fontSize: '1.1rem',
                 transition: styles.transitions.medium,
                 boxShadow: styles.shadows.small,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "0.5rem",
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
               }}
-              onMouseEnter={(e) => {
+              onMouseEnter={e => {
                 e.currentTarget.style.boxShadow = styles.shadows.medium;
               }}
-              onMouseLeave={(e) => {
+              onMouseLeave={e => {
                 e.currentTarget.style.boxShadow = styles.shadows.small;
               }}
             >
               <i className="fab fa-whatsapp" />
-              {t("contact.buttons.whatsapp")}
+              {t('contact.buttons.whatsapp')}
             </motion.button>
 
             <motion.a
@@ -237,31 +228,31 @@ export const ContactSection: React.FC = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
               style={{
-                backgroundColor: "#0077B5",
-                border: "none",
-                borderRadius: "8px",
-                padding: "1rem 2rem",
-                color: "white",
-                fontWeight: "600",
-                cursor: "pointer",
-                fontSize: "1.1rem",
+                backgroundColor: '#0077B5',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '1rem 2rem',
+                color: 'white',
+                fontWeight: '600',
+                cursor: 'pointer',
+                fontSize: '1.1rem',
                 transition: styles.transitions.medium,
                 boxShadow: styles.shadows.small,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "0.5rem",
-                textDecoration: "none",
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                textDecoration: 'none',
               }}
-              onMouseEnter={(e) => {
+              onMouseEnter={e => {
                 e.currentTarget.style.boxShadow = styles.shadows.medium;
               }}
-              onMouseLeave={(e) => {
+              onMouseLeave={e => {
                 e.currentTarget.style.boxShadow = styles.shadows.small;
               }}
             >
               <i className="fab fa-linkedin" />
-              {t("contact.buttons.linkedin")}
+              {t('contact.buttons.linkedin')}
             </motion.a>
           </div>
         </motion.div>
@@ -272,16 +263,16 @@ export const ContactSection: React.FC = () => {
 
 const commonStyles = {
   section: {
-    minHeight: "80vh",
-    padding: "4rem 1rem",
-    display: "flex",
-    flexDirection: "column" as const,
-    alignItems: "center",
-    gap: "2rem",
+    minHeight: '80vh',
+    padding: '4rem 1rem',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    gap: '2rem',
   },
   card: {
-    borderRadius: "12px",
-    overflow: "hidden",
-    transition: "all 0.3s ease",
+    borderRadius: '12px',
+    overflow: 'hidden',
+    transition: 'all 0.3s ease',
   },
 };

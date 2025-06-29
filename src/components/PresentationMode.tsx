@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 // import { useTranslation } from "react-i18next";
-import { useTheme } from "../contexts/ThemeContext";
-import { getThemeStyles } from "../utils/styles";
-import { LazyImage } from "./LazyImage";
+import { useTheme } from '../contexts/ThemeContext';
+import { getThemeStyles } from '../utils/styles';
+import { LazyImage } from './LazyImage';
 
 interface Slide {
   id: number;
@@ -23,54 +23,54 @@ export const PresentationMode: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      title: "Olá! Sou Cicero Lino",
-      content: "Full Stack Developer apaixonado por criar soluções inovadoras",
-      icon: "fas fa-user",
+      title: 'Olá! Sou Cicero Lino',
+      content: 'Full Stack Developer apaixonado por criar soluções inovadoras',
+      icon: 'fas fa-user',
       color: styles.colors.primary,
     },
     {
       id: 2,
-      title: "Tecnologias Principais",
-      content: "React, Node.js, TypeScript, AWS, PostgreSQL, NestJS",
-      icon: "fas fa-code",
+      title: 'Tecnologias Principais',
+      content: 'React, Node.js, TypeScript, AWS, PostgreSQL, NestJS',
+      icon: 'fas fa-code',
       color: styles.colors.secondary,
     },
     {
       id: 3,
-      title: "Experiência",
-      content: "2+ anos desenvolvendo aplicações web escaláveis",
-      icon: "fas fa-briefcase",
-      color: "#6f42c1",
+      title: 'Experiência',
+      content: '2+ anos desenvolvendo aplicações web escaláveis',
+      icon: 'fas fa-briefcase',
+      color: '#6f42c1',
     },
     {
       id: 4,
-      title: "Open Source",
-      content: "41 contribuições em projetos React, Node.js e TypeScript",
-      icon: "fab fa-github",
-      color: "#fd7e14",
+      title: 'Open Source',
+      content: '41 contribuições em projetos React, Node.js e TypeScript',
+      icon: 'fab fa-github',
+      color: '#fd7e14',
     },
     {
       id: 5,
-      title: "Disponibilidade",
-      content: "CLT, PJ, Cooperado, Freelancer",
-      icon: "fas fa-handshake",
-      color: "#28a745",
+      title: 'Disponibilidade',
+      content: 'CLT, PJ, Cooperado, Freelancer',
+      icon: 'fas fa-handshake',
+      color: '#28a745',
     },
     {
       id: 6,
-      title: "Vamos Conversar?",
-      content: "Entre em contato para discutir seu próximo projeto!",
-      icon: "fas fa-envelope",
+      title: 'Vamos Conversar?',
+      content: 'Entre em contato para discutir seu próximo projeto!',
+      icon: 'fas fa-envelope',
       color: styles.colors.primary,
     },
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide(prev => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToSlide = (index: number) => {
@@ -84,9 +84,9 @@ export const PresentationMode: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         style={{
-          position: "fixed",
-          bottom: "2rem",
-          left: "2rem",
+          position: 'fixed',
+          bottom: '2rem',
+          left: '2rem',
           zIndex: 1000,
         }}
       >
@@ -96,22 +96,22 @@ export const PresentationMode: React.FC = () => {
           whileTap={{ scale: 0.95 }}
           style={{
             backgroundColor: styles.colors.primary,
-            border: "none",
-            borderRadius: "50px",
-            padding: "1rem 1.5rem",
+            border: 'none',
+            borderRadius: '50px',
+            padding: '1rem 1.5rem',
             color: styles.colors.background,
-            fontWeight: "600",
-            cursor: "pointer",
-            fontSize: "1rem",
+            fontWeight: '600',
+            cursor: 'pointer',
+            fontSize: '1rem',
             boxShadow: styles.shadows.large,
-            display: "flex",
-            alignItems: "center",
-            gap: "0.5rem",
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
             transition: styles.transitions.medium,
           }}
           title="Modo Apresentação"
         >
-          <i className="fas fa-presentation" style={{ fontSize: "1.2rem" }} />
+          <i className="fas fa-presentation" style={{ fontSize: '1.2rem' }} />
           <span>Apresentação</span>
         </motion.button>
       </motion.div>
@@ -125,32 +125,32 @@ export const PresentationMode: React.FC = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         style={{
-          position: "fixed",
+          position: 'fixed',
           top: 0,
           left: 0,
-          width: "100vw",
-          height: "100vh",
+          width: '100vw',
+          height: '100vh',
           backgroundColor: styles.colors.background,
           zIndex: 9999,
-          display: "flex",
-          flexDirection: "column",
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         {/* Header */}
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "2rem",
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: '2rem',
             borderBottom: `1px solid ${styles.colors.border}`,
           }}
         >
           <h1
             style={{
               color: styles.colors.text,
-              fontSize: "1.5rem",
-              fontWeight: "bold",
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
             }}
           >
             Apresentação - Cicero Lino
@@ -160,13 +160,13 @@ export const PresentationMode: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             style={{
-              backgroundColor: "transparent",
+              backgroundColor: 'transparent',
               border: `2px solid ${styles.colors.primary}`,
-              borderRadius: "8px",
-              padding: "0.5rem 1rem",
+              borderRadius: '8px',
+              padding: '0.5rem 1rem',
               color: styles.colors.primary,
-              cursor: "pointer",
-              fontSize: "1rem",
+              cursor: 'pointer',
+              fontSize: '1rem',
             }}
           >
             <i className="fas fa-times" />
@@ -177,10 +177,10 @@ export const PresentationMode: React.FC = () => {
         <div
           style={{
             flex: 1,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "2rem",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem',
           }}
         >
           <AnimatePresence mode="wait">
@@ -191,9 +191,9 @@ export const PresentationMode: React.FC = () => {
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
               style={{
-                textAlign: "center",
-                maxWidth: "800px",
-                width: "100%",
+                textAlign: 'center',
+                maxWidth: '800px',
+                width: '100%',
               }}
             >
               <motion.div
@@ -201,16 +201,16 @@ export const PresentationMode: React.FC = () => {
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
                 style={{
-                  width: "120px",
-                  height: "120px",
-                  borderRadius: "50%",
+                  width: '120px',
+                  height: '120px',
+                  borderRadius: '50%',
                   backgroundColor: `${slides[currentSlide].color}20`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  margin: "0 auto 2rem auto",
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 2rem auto',
                   border: `3px solid ${slides[currentSlide].color}`,
-                  overflow: "hidden",
+                  overflow: 'hidden',
                 }}
               >
                 {currentSlide === 0 ? (
@@ -218,16 +218,16 @@ export const PresentationMode: React.FC = () => {
                     src="https://avatars.githubusercontent.com/u/53065315?v=4"
                     alt="Avatar de Cicero Lino"
                     style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "50%",
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '50%',
                     }}
                   />
                 ) : (
                   <i
                     className={slides[currentSlide].icon}
                     style={{
-                      fontSize: "3rem",
+                      fontSize: '3rem',
                       color: slides[currentSlide].color,
                     }}
                   />
@@ -239,10 +239,10 @@ export const PresentationMode: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
                 style={{
-                  fontSize: "3rem",
+                  fontSize: '3rem',
                   color: styles.colors.text,
-                  marginBottom: "2rem",
-                  fontWeight: "bold",
+                  marginBottom: '2rem',
+                  fontWeight: 'bold',
                 }}
               >
                 {slides[currentSlide].title}
@@ -253,9 +253,9 @@ export const PresentationMode: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
                 style={{
-                  fontSize: "1.5rem",
+                  fontSize: '1.5rem',
                   color: styles.colors.textSecondary,
-                  lineHeight: "1.6",
+                  lineHeight: '1.6',
                 }}
               >
                 {slides[currentSlide].content}
@@ -267,10 +267,10 @@ export const PresentationMode: React.FC = () => {
         {/* Navigation */}
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "2rem",
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            padding: '2rem',
             borderTop: `1px solid ${styles.colors.border}`,
           }}
         >
@@ -280,27 +280,24 @@ export const PresentationMode: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             style={{
               backgroundColor: styles.colors.primary,
-              border: "none",
-              borderRadius: "8px",
-              padding: "1rem 2rem",
+              border: 'none',
+              borderRadius: '8px',
+              padding: '1rem 2rem',
               color: styles.colors.background,
-              cursor: "pointer",
-              fontSize: "1rem",
-              fontWeight: "600",
+              cursor: 'pointer',
+              fontSize: '1rem',
+              fontWeight: '600',
             }}
           >
-            <i
-              className="fas fa-chevron-left"
-              style={{ marginRight: "0.5rem" }}
-            />
+            <i className="fas fa-chevron-left" style={{ marginRight: '0.5rem' }} />
             Anterior
           </motion.button>
 
           {/* Slide Indicators */}
           <div
             style={{
-              display: "flex",
-              gap: "0.5rem",
+              display: 'flex',
+              gap: '0.5rem',
             }}
           >
             {slides.map((_, index) => (
@@ -310,15 +307,13 @@ export const PresentationMode: React.FC = () => {
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 style={{
-                  width: "12px",
-                  height: "12px",
-                  borderRadius: "50%",
+                  width: '12px',
+                  height: '12px',
+                  borderRadius: '50%',
                   backgroundColor:
-                    index === currentSlide
-                      ? styles.colors.primary
-                      : styles.colors.border,
-                  border: "none",
-                  cursor: "pointer",
+                    index === currentSlide ? styles.colors.primary : styles.colors.border,
+                  border: 'none',
+                  cursor: 'pointer',
                 }}
               />
             ))}
@@ -330,20 +325,17 @@ export const PresentationMode: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             style={{
               backgroundColor: styles.colors.primary,
-              border: "none",
-              borderRadius: "8px",
-              padding: "1rem 2rem",
+              border: 'none',
+              borderRadius: '8px',
+              padding: '1rem 2rem',
               color: styles.colors.background,
-              cursor: "pointer",
-              fontSize: "1rem",
-              fontWeight: "600",
+              cursor: 'pointer',
+              fontSize: '1rem',
+              fontWeight: '600',
             }}
           >
             Próximo
-            <i
-              className="fas fa-chevron-right"
-              style={{ marginLeft: "0.5rem" }}
-            />
+            <i className="fas fa-chevron-right" style={{ marginLeft: '0.5rem' }} />
           </motion.button>
         </div>
       </motion.div>

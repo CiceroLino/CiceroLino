@@ -1,8 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { useTheme } from "../contexts/ThemeContext";
-import { getThemeStyles } from "../utils/styles";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from '../contexts/ThemeContext';
+import { getThemeStyles } from '../utils/styles';
 
 export const BlogSection: React.FC = () => {
   const { theme } = useTheme();
@@ -21,9 +21,8 @@ export const BlogSection: React.FC = () => {
       }}
       style={{
         ...commonStyles.section,
-        backgroundColor:
-          theme === "dark" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.9)",
-        position: "relative",
+        backgroundColor: theme === 'dark' ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.9)',
+        position: 'relative',
         zIndex: 11,
       }}
     >
@@ -32,18 +31,18 @@ export const BlogSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         style={{
-          fontSize: "3rem",
-          marginBottom: "3rem",
-          textAlign: "center",
-          fontWeight: "bold",
+          fontSize: '3rem',
+          marginBottom: '3rem',
+          textAlign: 'center',
+          fontWeight: 'bold',
           transition: styles.transitions.medium,
-          display: "inline-block",
-          lineHeight: "1.2",
+          display: 'inline-block',
+          lineHeight: '1.2',
           color: styles.colors.primary,
           textShadow: `0 0 20px ${styles.colors.primary}40`,
         }}
       >
-        {t("blog.title")}
+        {t('blog.title')}
       </motion.h2>
 
       <motion.div
@@ -53,55 +52,55 @@ export const BlogSection: React.FC = () => {
         style={{
           ...commonStyles.card,
           backgroundColor: styles.colors.surface,
-          padding: "4rem 2rem",
+          padding: '4rem 2rem',
           boxShadow: styles.shadows.large,
           border: `1px solid ${styles.colors.border}`,
-          textAlign: "center",
-          maxWidth: "600px",
-          width: "100%",
+          textAlign: 'center',
+          maxWidth: '600px',
+          width: '100%',
         }}
       >
         <motion.div
           animate={{ rotate: [0, 5, -5, 0] }}
           transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
           style={{
-            fontSize: "4rem",
-            marginBottom: "2rem",
+            fontSize: '4rem',
+            marginBottom: '2rem',
             color: styles.colors.secondary,
           }}
         >
-          {t("blog.construction")}
+          {t('blog.construction')}
         </motion.div>
 
         <p
           style={{
-            fontSize: "1.2rem",
-            lineHeight: "1.6",
+            fontSize: '1.2rem',
+            lineHeight: '1.6',
             color: styles.colors.textSecondary,
-            marginBottom: "2rem",
+            marginBottom: '2rem',
           }}
         >
-          {t("blog.description")}
+          {t('blog.description')}
         </p>
 
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "1rem",
-            flexWrap: "wrap",
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '1rem',
+            flexWrap: 'wrap',
           }}
         >
           <span
             style={{
               backgroundColor: styles.colors.primary,
               color: styles.colors.background,
-              padding: "0.5rem 1rem",
-              borderRadius: "20px",
-              fontSize: "0.9rem",
-              fontWeight: "500",
+              padding: '0.5rem 1rem',
+              borderRadius: '20px',
+              fontSize: '0.9rem',
+              fontWeight: '500',
             }}
           >
             React
@@ -110,10 +109,10 @@ export const BlogSection: React.FC = () => {
             style={{
               backgroundColor: styles.colors.secondary,
               color: styles.colors.background,
-              padding: "0.5rem 1rem",
-              borderRadius: "20px",
-              fontSize: "0.9rem",
-              fontWeight: "500",
+              padding: '0.5rem 1rem',
+              borderRadius: '20px',
+              fontSize: '0.9rem',
+              fontWeight: '500',
             }}
           >
             Node.js
@@ -122,10 +121,10 @@ export const BlogSection: React.FC = () => {
             style={{
               backgroundColor: styles.colors.primary,
               color: styles.colors.background,
-              padding: "0.5rem 1rem",
-              borderRadius: "20px",
-              fontSize: "0.9rem",
-              fontWeight: "500",
+              padding: '0.5rem 1rem',
+              borderRadius: '20px',
+              fontSize: '0.9rem',
+              fontWeight: '500',
             }}
           >
             TypeScript
@@ -134,10 +133,10 @@ export const BlogSection: React.FC = () => {
             style={{
               backgroundColor: styles.colors.secondary,
               color: styles.colors.background,
-              padding: "0.5rem 1rem",
-              borderRadius: "20px",
-              fontSize: "0.9rem",
-              fontWeight: "500",
+              padding: '0.5rem 1rem',
+              borderRadius: '20px',
+              fontSize: '0.9rem',
+              fontWeight: '500',
             }}
           >
             AWS
@@ -150,16 +149,16 @@ export const BlogSection: React.FC = () => {
 
 const commonStyles = {
   section: {
-    minHeight: "80vh",
-    padding: "4rem 1rem",
-    display: "flex",
-    flexDirection: "column" as const,
-    alignItems: "center",
-    gap: "2rem",
+    minHeight: '80vh',
+    padding: '4rem 1rem',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    gap: '2rem',
   },
   card: {
-    borderRadius: "12px",
-    overflow: "hidden",
-    transition: "all 0.3s ease",
+    borderRadius: '12px',
+    overflow: 'hidden',
+    transition: 'all 0.3s ease',
   },
 };

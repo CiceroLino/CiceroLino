@@ -1,11 +1,12 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { useTheme } from "../contexts/ThemeContext";
-import { getThemeStyles } from "../utils/styles";
-import { appConfig } from "../config/app.config";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { useTheme } from '../contexts/ThemeContext';
+import { getThemeStyles } from '../utils/styles';
+import { appConfig } from '../config/app.config';
 
 interface HeroSectionProps {
+  // eslint-disable-next-line no-unused-vars
   onSectionClick: (section: string) => void;
 }
 
@@ -26,16 +27,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
       }}
       style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        padding: "0 1rem",
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        padding: '0 1rem',
         color: styles.colors.text,
-        backgroundColor: "transparent",
-        position: "relative",
+        backgroundColor: 'transparent',
+        position: 'relative',
         zIndex: 11,
       }}
     >
@@ -46,12 +47,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
       >
         <h1
           style={{
-            fontSize: "4rem",
-            marginBottom: "1rem",
-            fontWeight: "bold",
+            fontSize: '4rem',
+            marginBottom: '1rem',
+            fontWeight: 'bold',
             transition: styles.transitions.medium,
-            display: "inline-block",
-            lineHeight: "1.2",
+            display: 'inline-block',
+            lineHeight: '1.2',
             color: styles.colors.primary,
             textShadow: `0 0 20px ${styles.colors.primary}40`,
           }}
@@ -67,24 +68,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
       >
         <h2
           style={{
-            fontSize: "1.5rem",
-            marginBottom: "1rem",
+            fontSize: '1.5rem',
+            marginBottom: '1rem',
             color: styles.colors.secondary,
-            fontWeight: "300",
+            fontWeight: '300',
           }}
         >
-          {t("hero.title")}
+          {t('hero.title')}
         </h2>
         <p
           style={{
-            fontSize: "1.2rem",
+            fontSize: '1.2rem',
             maxWidth: 700,
-            marginBottom: "2rem",
-            lineHeight: "1.6",
+            marginBottom: '2rem',
+            lineHeight: '1.6',
             color: styles.colors.textSecondary,
           }}
         >
-          {t("hero.description")}
+          {t('hero.description')}
         </p>
       </motion.div>
 
@@ -93,11 +94,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.8 }}
         style={{
-          display: "flex",
-          gap: "1.5rem",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          marginBottom: "2rem",
+          display: 'flex',
+          gap: '1.5rem',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          marginBottom: '2rem',
         }}
       >
         <motion.button
@@ -105,50 +106,50 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
           whileTap={{ scale: 0.98 }}
           style={{
             backgroundColor: styles.colors.primary,
-            border: "none",
-            borderRadius: "8px",
-            padding: "1rem 2rem",
+            border: 'none',
+            borderRadius: '8px',
+            padding: '1rem 2rem',
             color: styles.colors.background,
-            fontWeight: "600",
-            cursor: "pointer",
-            fontSize: "1.1rem",
+            fontWeight: '600',
+            cursor: 'pointer',
+            fontSize: '1.1rem',
             transition: styles.transitions.medium,
             boxShadow: styles.shadows.small,
           }}
-          onMouseEnter={(e) => {
+          onMouseEnter={e => {
             e.currentTarget.style.boxShadow = styles.shadows.medium;
           }}
-          onMouseLeave={(e) => {
+          onMouseLeave={e => {
             e.currentTarget.style.boxShadow = styles.shadows.small;
           }}
-          onClick={() => onSectionClick("portfolio")}
+          onClick={() => onSectionClick('portfolio')}
         >
-          {t("hero.buttons.portfolio")}
+          {t('hero.buttons.portfolio')}
         </motion.button>
 
         <motion.button
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.98 }}
           style={{
-            backgroundColor: "transparent",
+            backgroundColor: 'transparent',
             border: `2px solid ${styles.colors.secondary}`,
-            borderRadius: "8px",
-            padding: "1rem 2rem",
+            borderRadius: '8px',
+            padding: '1rem 2rem',
             color: styles.colors.secondary,
-            fontWeight: "600",
-            cursor: "pointer",
-            fontSize: "1.1rem",
+            fontWeight: '600',
+            cursor: 'pointer',
+            fontSize: '1.1rem',
             transition: styles.transitions.medium,
           }}
-          onMouseEnter={(e) => {
+          onMouseEnter={e => {
             e.currentTarget.style.backgroundColor = `${styles.colors.secondary}10`;
           }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "transparent";
+          onMouseLeave={e => {
+            e.currentTarget.style.backgroundColor = 'transparent';
           }}
-          onClick={() => onSectionClick("contact")}
+          onClick={() => onSectionClick('contact')}
         >
-          {t("hero.buttons.hire")}
+          {t('hero.buttons.hire')}
         </motion.button>
       </motion.div>
 
@@ -157,9 +158,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
         style={{
-          display: "flex",
-          gap: "2rem",
-          marginTop: "2rem",
+          display: 'flex',
+          gap: '2rem',
+          marginTop: '2rem',
         }}
       >
         <motion.a
@@ -169,13 +170,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
           whileHover={{ scale: 1.2 }}
           style={{
             color: styles.colors.primary,
-            fontSize: "1.5rem",
+            fontSize: '1.5rem',
             transition: styles.transitions.medium,
           }}
-          onMouseEnter={(e) => {
+          onMouseEnter={e => {
             e.currentTarget.style.color = styles.colors.text;
           }}
-          onMouseLeave={(e) => {
+          onMouseLeave={e => {
             e.currentTarget.style.color = styles.colors.primary;
           }}
         >
@@ -189,13 +190,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onSectionClick }) => {
           whileHover={{ scale: 1.2 }}
           style={{
             color: styles.colors.primary,
-            fontSize: "1.5rem",
+            fontSize: '1.5rem',
             transition: styles.transitions.medium,
           }}
-          onMouseEnter={(e) => {
+          onMouseEnter={e => {
             e.currentTarget.style.color = styles.colors.text;
           }}
-          onMouseLeave={(e) => {
+          onMouseLeave={e => {
             e.currentTarget.style.color = styles.colors.primary;
           }}
         >

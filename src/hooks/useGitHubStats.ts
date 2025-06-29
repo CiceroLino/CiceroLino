@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { type GitHubStats } from "../types";
-import { githubService } from "../services/github.service";
+import { useState, useEffect } from 'react';
+import { type GitHubStats } from '../types';
+import { githubService } from '../services/github.service';
 
 export const useGitHubStats = () => {
   const [stats, setStats] = useState<GitHubStats | null>(null);
@@ -15,8 +15,8 @@ export const useGitHubStats = () => {
         setStats(userStats);
         setError(null);
       } catch (err) {
-        setError("Erro ao carregar estatísticas do GitHub");
-        console.error("Error fetching stats:", err);
+        setError('Erro ao carregar estatísticas do GitHub');
+        console.error('Error fetching stats:', err);
       } finally {
         setLoading(false);
       }

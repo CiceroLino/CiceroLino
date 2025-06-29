@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 interface UseIntersectionObserverOptions {
   threshold?: number;
@@ -6,10 +6,8 @@ interface UseIntersectionObserverOptions {
   triggerOnce?: boolean;
 }
 
-export const useIntersectionObserver = (
-  options: UseIntersectionObserverOptions = {}
-) => {
-  const { threshold = 0.1, rootMargin = "0px", triggerOnce = true } = options;
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {}) => {
+  const { threshold = 0.1, rootMargin = '0px', triggerOnce = true } = options;
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [hasTriggered, setHasTriggered] = useState(false);
   const ref = useRef<HTMLElement>(null);
@@ -33,7 +31,7 @@ export const useIntersectionObserver = (
       {
         threshold,
         rootMargin,
-      }
+      },
     );
 
     observer.observe(element);
@@ -45,8 +43,6 @@ export const useIntersectionObserver = (
 
   return {
     ref,
-    isIntersecting: triggerOnce
-      ? isIntersecting || hasTriggered
-      : isIntersecting,
+    isIntersecting: triggerOnce ? isIntersecting || hasTriggered : isIntersecting,
   };
 };
