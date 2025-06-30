@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -16,6 +16,7 @@ import { PresentationMode } from './components/PresentationMode';
 import { getThemeStyles } from './utils/styles';
 import { useTheme } from './contexts/ThemeContext';
 import './i18n';
+import { Loader } from './components/Loader';
 
 const BackgroundVideo: React.FC = () => {
   const { theme } = useTheme();
@@ -128,6 +129,12 @@ const AppContent: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timer);
+  }, []);
+  if (loading) return <Loader />;
   return (
     <ThemeProvider>
       <LanguageProvider>
