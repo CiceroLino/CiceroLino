@@ -40,6 +40,7 @@ export const useSkills = () => {
   useEffect(() => {
     // Atualiza skills do GitHub na inicialização
     updateSkillsFromGitHub();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   return {
