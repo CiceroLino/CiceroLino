@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { getThemeStyles } from '../utils/styles';
 import { LazyImage } from './LazyImage';
@@ -15,7 +15,7 @@ interface Slide {
 
 export const PresentationMode: React.FC = () => {
   const { theme } = useTheme();
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   const styles = getThemeStyles(theme);
   const [isActive, setIsActive] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,43 +23,43 @@ export const PresentationMode: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      title: 'Olá! Sou Cicero Lino',
-      content: 'Full Stack Developer apaixonado por criar soluções inovadoras',
+      title: t('presentation.slide1.title'),
+      content: t('presentation.slide1.content'),
       icon: 'fas fa-user',
       color: styles.colors.primary,
     },
     {
       id: 2,
-      title: 'Tecnologias Principais',
-      content: 'React, Node.js, TypeScript, AWS, PostgreSQL, NestJS',
+      title: t('presentation.slide2.title'),
+      content: t('presentation.slide2.content'),
       icon: 'fas fa-code',
       color: styles.colors.secondary,
     },
     {
       id: 3,
-      title: 'Experiência',
-      content: '2+ anos desenvolvendo aplicações web escaláveis',
+      title: t('presentation.slide3.title'),
+      content: t('presentation.slide3.content'),
       icon: 'fas fa-briefcase',
       color: '#6f42c1',
     },
     {
       id: 4,
-      title: 'Open Source',
-      content: '41 contribuições em projetos React, Node.js e TypeScript',
+      title: t('presentation.slide4.title'),
+      content: t('presentation.slide4.content'),
       icon: 'fab fa-github',
       color: '#fd7e14',
     },
     {
       id: 5,
-      title: 'Disponibilidade',
-      content: 'CLT, PJ, Cooperado, Freelancer',
+      title: t('presentation.slide5.title'),
+      content: t('presentation.slide5.content'),
       icon: 'fas fa-handshake',
       color: '#28a745',
     },
     {
       id: 6,
-      title: 'Vamos Conversar?',
-      content: 'Entre em contato para discutir seu próximo projeto!',
+      title: t('presentation.slide6.title'),
+      content: t('presentation.slide6.content'),
       icon: 'fas fa-envelope',
       color: styles.colors.primary,
     },
@@ -112,7 +112,7 @@ export const PresentationMode: React.FC = () => {
           title="Modo Apresentação"
         >
           <i className="fas fa-presentation" style={{ fontSize: '1.2rem' }} />
-          <span>Apresentação</span>
+          <span>{t('presentation.button')}</span>
         </motion.button>
       </motion.div>
     );
@@ -153,7 +153,7 @@ export const PresentationMode: React.FC = () => {
               fontWeight: 'bold',
             }}
           >
-            Apresentação - Cicero Lino
+            {t('presentation.title')}
           </h1>
           <motion.button
             onClick={() => setIsActive(false)}
@@ -290,7 +290,7 @@ export const PresentationMode: React.FC = () => {
             }}
           >
             <i className="fas fa-chevron-left" style={{ marginRight: '0.5rem' }} />
-            Anterior
+            {t('presentation.previous')}
           </motion.button>
 
           {/* Slide Indicators */}
@@ -334,7 +334,7 @@ export const PresentationMode: React.FC = () => {
               fontWeight: '600',
             }}
           >
-            Próximo
+            {t('presentation.next')}
             <i className="fas fa-chevron-right" style={{ marginLeft: '0.5rem' }} />
           </motion.button>
         </div>

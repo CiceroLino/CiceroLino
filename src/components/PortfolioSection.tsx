@@ -199,7 +199,7 @@ export const PortfolioSection: React.FC = () => {
                     marginBottom: '1rem',
                   }}
                 >
-                  {repo.description || 'Sem descrição disponível'}
+                  {repo.description || t('portfolio.noDescription')}
                 </p>
               </div>
 

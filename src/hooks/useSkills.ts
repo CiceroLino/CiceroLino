@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Skill } from '../types';
 import { githubService } from '../services/github.service';
 import { appConfig } from '../config/app.config';
 
 export const useSkills = () => {
+  const { t } = useTranslation();
   const [skills, setSkills] = useState<Skill[]>(appConfig.skills);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -28,7 +30,7 @@ export const useSkills = () => {
       setSkills(updatedSkills);
       setError(null);
     } catch (err) {
-      setError('Erro ao atualizar skills do GitHub');
+      setError(t('skills.updateError'));
       console.error('Error updating skills:', err);
     } finally {
       setLoading(false);
@@ -38,7 +40,7 @@ export const useSkills = () => {
   useEffect(() => {
     // Atualiza skills do GitHub na inicialização
     updateSkillsFromGitHub();
-  }, []);
+  }, [t]);
 
   return {
     skills,

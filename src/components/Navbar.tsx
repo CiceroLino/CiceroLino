@@ -130,7 +130,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSectionClick }) => {
             e.currentTarget.style.borderColor = styles.colors.primary;
             e.currentTarget.style.transform = 'scale(1)';
           }}
-          title={`Mudar para ${language === 'pt' ? 'inglês' : 'português'}`}
+          title={language === 'pt' ? t('nav.switchToEnglish') : t('nav.switchToPortuguese')}
         >
           {language === 'pt' ? '🇺🇸 EN' : '🇧🇷 PT'}
         </motion.button>

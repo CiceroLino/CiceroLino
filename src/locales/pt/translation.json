@@ -8,6 +8,8 @@
     "portfolio": "Portfólio",
     "blog": "Blog",
     "contact": "Contato",
+    "switchToEnglish": "Mudar para inglês",
+    "switchToPortuguese": "Mudar para português",
     "theme": {
       "light": "☀️ Claro",
       "dark": "🌙 Escuro"
@@ -38,13 +40,31 @@
     }
   },
   "skills": {
-    "title": "Skills & Tecnologias"
+    "title": "Skills & Tecnologias",
+    "mainTechnologies": "Tecnologias Principais",
+    "githubStats": "Estatísticas GitHub",
+    "codingPlatforms": "Plataformas de Coding",
+    "loadingError": "Erro ao carregar estatísticas",
+    "github": {
+      "publicRepos": "Repositórios Públicos",
+      "followers": "Seguidores",
+      "following": "Seguindo"
+    },
+    "platforms": {
+      "problemsSolved": "Problemas Resolvidos",
+      "stars": "Estrelas",
+      "rating": "Rating",
+      "ranking": "Ranking"
+    },
+    "updateError": "Erro ao atualizar skills do GitHub"
   },
   "portfolio": {
     "title": "Portfólio",
     "loading": "Carregando Portfólio...",
     "error": "Erro ao carregar portfólio",
+    "loadingError": "Erro ao carregar projetos do portfólio",
     "noProjects": "Nenhum projeto encontrado. Verifique a configuração do GitHub.",
+    "noDescription": "Sem descrição disponível",
     "buttons": {
       "github": "GitHub",
       "demo": "Ver Demo"
@@ -57,6 +77,7 @@
   },
   "contact": {
     "title": "Vamos Trabalhar Juntos?",
+    "getInTouch": "Entre em Contato",
     "availability": {
       "title": "Disponibilidade",
       "description": "Disponível para projetos freelance e oportunidades de contratação"
@@ -70,6 +91,68 @@
       "whatsapp": "WhatsApp",
       "linkedin": "LinkedIn"
     },
+    "email": {
+      "subject": "Proposta de Trabalho"
+    },
+    "whatsapp": {
+      "message": "Olá! Vi seu portfólio e gostaria de conversar sobre uma oportunidade de trabalho."
+    },
     "message": "Estou sempre aberto a novas oportunidades e colaborações interessantes. Vamos conversar sobre como posso ajudar no seu próximo projeto!"
+  },
+  "timeline": {
+    "title": "Minha Jornada",
+    "nextChapter": "Próximo Capítulo",
+    "nextChapterDescription": "Estou sempre em busca de novos desafios e oportunidades para crescer. Vamos escrever o próximo capítulo juntos?",
+    "letsTalk": "Vamos Conversar!"
+  },
+  "opensource": {
+    "title": "Open Source",
+    "types": {
+      "framework": "Framework",
+      "runtime": "Runtime",
+      "language": "Linguagem",
+      "editor": "Editor"
+    },
+    "viewOnGitHub": "Ver no GitHub",
+    "stats": {
+      "contributions": "Contribuições",
+      "projects": "Projetos",
+      "yearsActive": "Anos Ativo"
+    },
+    "collaborate": {
+      "title": "Interessado em colaborar?",
+      "description": "Estou sempre aberto a contribuir para projetos open source interessantes. Se você tem um projeto que precisa de ajuda, entre em contato!",
+      "button": "Vamos Colaborar!"
+    }
+  },
+  "presentation": {
+    "title": "Apresentação - Cicero Lino",
+    "button": "Apresentação",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "slide1": {
+      "title": "Olá! Sou Cicero Lino",
+      "content": "Full Stack Developer apaixonado por criar soluções inovadoras"
+    },
+    "slide2": {
+      "title": "Tecnologias Principais",
+      "content": "React, Node.js, TypeScript, AWS, PostgreSQL, NestJS"
+    },
+    "slide3": {
+      "title": "Experiência",
+      "content": "2+ anos desenvolvendo aplicações web escaláveis"
+    },
+    "slide4": {
+      "title": "Open Source",
+      "content": "41 contribuições em projetos React, Node.js e TypeScript"
+    },
+    "slide5": {
+      "title": "Disponibilidade",
+      "content": "CLT, PJ, Cooperado, Freelancer"
+    },
+    "slide6": {
+      "title": "Vamos Conversar?",
+      "content": "Entre em contato para discutir seu próximo projeto!"
+    }
   }
 }

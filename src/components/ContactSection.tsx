@@ -12,13 +12,14 @@ export const ContactSection: React.FC = () => {
   const { contactInfo } = appConfig;
 
   const handleEmailClick = () => {
-    window.open(`mailto:${contactInfo.email}?subject=Proposta de Trabalho`, '_blank');
+    window.open(
+      `mailto:${contactInfo.email}?Fsubject=${encodeURIComponent(t('contact.email.subject'))}`,
+      '_blank',
+    );
   };
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      'Olá! Vi seu portfólio e gostaria de conversar sobre uma oportunidade de trabalho.',
-    );
+    const message = encodeURIComponent(t('contact.whatsapp.message'));
     window.open(`https://wa.me/${contactInfo.whatsapp}?text=${message}`, '_blank');
   };
 
@@ -145,7 +146,7 @@ export const ContactSection: React.FC = () => {
               fontWeight: '600',
             }}
           >
-            Entre em Contato
+            {t('contact.getInTouch')}
           </h3>
           <p
             style={{

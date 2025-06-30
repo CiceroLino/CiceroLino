@@ -1,18 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { getThemeStyles } from '../utils/styles';
 
 export const OpenSourceSection: React.FC = () => {
   const { theme } = useTheme();
-  // const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const styles = getThemeStyles(theme);
 
   const openSourceProjects = [
     {
       name: 'React',
-      description: 'Contribuições para melhorias de performance e correções de bugs',
+      descriptionEn: 'Contributions to performance improvements and bug fixes',
+      descriptionPt: 'Contribuições para melhorias de performance e correções de bugs',
       contributions: 15,
       stars: 200000,
       language: 'JavaScript',
@@ -23,7 +24,8 @@ export const OpenSourceSection: React.FC = () => {
     },
     {
       name: 'Node.js',
-      description: 'Contribuições para módulos de segurança e otimizações',
+      descriptionEn: 'Contributions to security modules and optimizations',
+      descriptionPt: 'Contribuições para módulos de segurança e otimizações',
       contributions: 8,
       stars: 95000,
       language: 'JavaScript',
@@ -34,7 +36,8 @@ export const OpenSourceSection: React.FC = () => {
     },
     {
       name: 'TypeScript',
-      description: 'Melhorias na tipagem e documentação',
+      descriptionEn: 'Improvements in typing and documentation',
+      descriptionPt: 'Melhorias na tipagem e documentação',
       contributions: 12,
       stars: 95000,
       language: 'TypeScript',
@@ -45,7 +48,8 @@ export const OpenSourceSection: React.FC = () => {
     },
     {
       name: 'VS Code',
-      description: 'Contribuições para extensões e melhorias de UX',
+      descriptionEn: 'Contributions to extensions and UX improvements',
+      descriptionPt: 'Contribuições para extensões e melhorias de UX',
       contributions: 6,
       stars: 140000,
       language: 'TypeScript',
@@ -96,7 +100,7 @@ export const OpenSourceSection: React.FC = () => {
           textShadow: `0 0 20px ${styles.colors.primary}40`,
         }}
       >
-        Open Source
+        {t('opensource.title')}
       </motion.h2>
 
       {/* Estatísticas Gerais */}
@@ -134,7 +138,9 @@ export const OpenSourceSection: React.FC = () => {
           >
             {stats.totalContributions}
           </div>
-          <div style={{ color: styles.colors.textSecondary, fontSize: '1rem' }}>Contribuições</div>
+          <div style={{ color: styles.colors.textSecondary, fontSize: '1rem' }}>
+            {t('opensource.stats.contributions')}
+          </div>
         </motion.div>
 
         <motion.div
@@ -158,7 +164,9 @@ export const OpenSourceSection: React.FC = () => {
           >
             {stats.projectsContributed}
           </div>
-          <div style={{ color: styles.colors.textSecondary, fontSize: '1rem' }}>Projetos</div>
+          <div style={{ color: styles.colors.textSecondary, fontSize: '1rem' }}>
+            {t('opensource.stats.projects')}
+          </div>
         </motion.div>
 
         <motion.div
@@ -182,7 +190,9 @@ export const OpenSourceSection: React.FC = () => {
           >
             {stats.yearsActive}
           </div>
-          <div style={{ color: styles.colors.textSecondary, fontSize: '1rem' }}>Anos Ativo</div>
+          <div style={{ color: styles.colors.textSecondary, fontSize: '1rem' }}>
+            {t('opensource.stats.yearsActive')}
+          </div>
         </motion.div>
       </motion.div>
 
@@ -264,7 +274,7 @@ export const OpenSourceSection: React.FC = () => {
                     borderRadius: '12px',
                   }}
                 >
-                  {project.type}
+                  {t(`opensource.types.${project.type.toLowerCase()}`, project.type)}
                 </span>
               </div>
             </div>
@@ -277,7 +287,7 @@ export const OpenSourceSection: React.FC = () => {
                 marginBottom: '1.5rem',
               }}
             >
-              {project.description}
+              {i18n.language === 'pt' ? project.descriptionPt : project.descriptionEn}
             </p>
 
             <div
@@ -347,7 +357,9 @@ export const OpenSourceSection: React.FC = () => {
                 border: `1px solid ${styles.colors.border}`,
               }}
             >
-              <span style={{ color: styles.colors.text, fontWeight: '500' }}>Contribuições</span>
+              <span style={{ color: styles.colors.text, fontWeight: '500' }}>
+                {t('opensource.stats.contributions')}
+              </span>
               <span
                 style={{
                   color: project.color,
@@ -372,7 +384,7 @@ export const OpenSourceSection: React.FC = () => {
               }}
             >
               <i className="fas fa-external-link-alt" />
-              Ver no GitHub
+              {t('opensource.viewOnGitHub')}
             </div>
           </motion.div>
         ))}
@@ -396,7 +408,7 @@ export const OpenSourceSection: React.FC = () => {
             fontWeight: '600',
           }}
         >
-          Interessado em colaborar?
+          {t('opensource.collaborate.title')}
         </h3>
         <p
           style={{
@@ -408,8 +420,7 @@ export const OpenSourceSection: React.FC = () => {
             lineHeight: '1.6',
           }}
         >
-          Estou sempre aberto a contribuir para projetos open source interessantes. Se você tem um
-          projeto que precisa de ajuda, entre em contato!
+          {t('opensource.collaborate.description')}
         </p>
         <motion.button
           whileHover={{ y: -2 }}
@@ -439,7 +450,7 @@ export const OpenSourceSection: React.FC = () => {
             }
           }}
         >
-          Vamos Colaborar!
+          {t('opensource.collaborate.button')}
         </motion.button>
       </motion.div>
     </motion.section>

@@ -112,7 +112,7 @@ export const SkillsSection: React.FC = () => {
               textAlign: 'center',
             }}
           >
-            Tecnologias Principais
+            {t('skills.mainTechnologies')}
           </h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {skills.map((skill, index) => (
@@ -211,7 +211,7 @@ export const SkillsSection: React.FC = () => {
               textAlign: 'center',
             }}
           >
-            Estatísticas GitHub
+            {t('skills.githubStats')}
           </h3>
           {loading && (
             <div
@@ -242,7 +242,7 @@ export const SkillsSection: React.FC = () => {
                   className="fas fa-exclamation-triangle"
                   style={{ fontSize: '2rem', marginBottom: '1rem' }}
                 />
-                <p>Erro ao carregar estatísticas</p>
+                <p>{t('skills.loadingError')}</p>
               </div>
             </div>
           )}
@@ -266,7 +266,7 @@ export const SkillsSection: React.FC = () => {
                 }}
               >
                 <span style={{ color: styles.colors.text, fontWeight: '500' }}>
-                  Repositórios Públicos
+                  {t('skills.github.publicRepos')}
                 </span>
                 <span
                   style={{
@@ -289,7 +289,9 @@ export const SkillsSection: React.FC = () => {
                   border: `1px solid ${styles.colors.border}`,
                 }}
               >
-                <span style={{ color: styles.colors.text, fontWeight: '500' }}>Seguidores</span>
+                <span style={{ color: styles.colors.text, fontWeight: '500' }}>
+                  {t('skills.github.followers')}
+                </span>
                 <span
                   style={{
                     color: styles.colors.primary,
@@ -311,7 +313,9 @@ export const SkillsSection: React.FC = () => {
                   border: `1px solid ${styles.colors.border}`,
                 }}
               >
-                <span style={{ color: styles.colors.text, fontWeight: '500' }}>Seguindo</span>
+                <span style={{ color: styles.colors.text, fontWeight: '500' }}>
+                  {t('skills.github.following')}
+                </span>
                 <span
                   style={{
                     color: styles.colors.primary,
@@ -348,7 +352,7 @@ export const SkillsSection: React.FC = () => {
               textAlign: 'center',
             }}
           >
-            Plataformas de Coding
+            {t('skills.codingPlatforms')}
           </h3>
           <div
             style={{
@@ -415,7 +419,7 @@ export const SkillsSection: React.FC = () => {
                         }}
                       >
                         <span style={{ color: styles.colors.textSecondary }}>
-                          Problemas Resolvidos
+                          {t('skills.platforms.problemsSolved')}
                         </span>
                         <span
                           style={{
@@ -433,7 +437,9 @@ export const SkillsSection: React.FC = () => {
                           alignItems: 'center',
                         }}
                       >
-                        <span style={{ color: styles.colors.textSecondary }}>Estrelas</span>
+                        <span style={{ color: styles.colors.textSecondary }}>
+                          {t('skills.platforms.stars')}
+                        </span>
                         <span
                           style={{
                             color: platform.color,
@@ -450,7 +456,9 @@ export const SkillsSection: React.FC = () => {
                           alignItems: 'center',
                         }}
                       >
-                        <span style={{ color: styles.colors.textSecondary }}>Ranking</span>
+                        <span style={{ color: styles.colors.textSecondary }}>
+                          {t('skills.platforms.ranking')}
+                        </span>
                         <span
                           style={{
                             color: platform.color,
@@ -471,7 +479,7 @@ export const SkillsSection: React.FC = () => {
                         }}
                       >
                         <span style={{ color: styles.colors.textSecondary }}>
-                          Problemas Resolvidos
+                          {t('skills.platforms.problemsSolved')}
                         </span>
                         <span
                           style={{
@@ -489,7 +497,9 @@ export const SkillsSection: React.FC = () => {
                           alignItems: 'center',
                         }}
                       >
-                        <span style={{ color: styles.colors.textSecondary }}>Rating</span>
+                        <span style={{ color: styles.colors.textSecondary }}>
+                          {t('skills.platforms.rating')}
+                        </span>
                         <span
                           style={{
                             color: platform.color,
@@ -506,7 +516,9 @@ export const SkillsSection: React.FC = () => {
                           alignItems: 'center',
                         }}
                       >
-                        <span style={{ color: styles.colors.textSecondary }}>Ranking</span>
+                        <span style={{ color: styles.colors.textSecondary }}>
+                          {t('skills.platforms.ranking')}
+                        </span>
                         <span
                           style={{
                             color: platform.color,
