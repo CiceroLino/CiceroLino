@@ -221,7 +221,7 @@ export const TimelineSection: React.FC = () => {
               const eventColor = getEventColor(event.type);
               return (
                 <div
-                  key={event.title + event.year}
+                  key={(i18n.language === 'pt' ? event.titlePt : event.titleEn) + event.year}
                   style={{
                     display: 'flex',
                     alignItems: 'flex-start',
@@ -311,7 +311,8 @@ export const TimelineSection: React.FC = () => {
                     >
                       {i18n.language === 'pt' ? event.descriptionPt : event.descriptionEn}
                     </p>
-                    {event.achievements && (
+                    {(i18n.language === 'pt' ? event.achievementsPt : event.achievementsEn).length >
+                      0 && (
                       <ul
                         style={{
                           listStyle: 'none',
@@ -320,24 +321,23 @@ export const TimelineSection: React.FC = () => {
                           marginBottom: '0.7rem',
                         }}
                       >
-                        {(i18n.language === 'pt'
-                          ? event.achievementsPt
-                          : event.achievementsEn
-                        )?.map((ach, i) => (
-                          <li
-                            key={i}
-                            style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              gap: '0.5rem',
-                              color: eventColor,
-                              fontSize: '0.93rem',
-                            }}
-                          >
-                            <i className="fas fa-check-circle" style={{ fontSize: '0.9rem' }} />
-                            <span style={{ color: styles.colors.textSecondary }}>{ach}</span>
-                          </li>
-                        ))}
+                        {(i18n.language === 'pt' ? event.achievementsPt : event.achievementsEn).map(
+                          (ach, i) => (
+                            <li
+                              key={i}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                color: eventColor,
+                                fontSize: '0.93rem',
+                              }}
+                            >
+                              <i className="fas fa-check-circle" style={{ fontSize: '0.9rem' }} />
+                              <span style={{ color: styles.colors.textSecondary }}>{ach}</span>
+                            </li>
+                          ),
+                        )}
                       </ul>
                     )}
                     <div
