@@ -58,8 +58,8 @@ const BackgroundVideo: React.FC = () => {
         }}
       >
         <source
-          // src="/coverr-coding-sequences-9906-1080p.mp4"
-          src="/coverr-sun-shining-over-the-ocean-2178-1080p.mp4"
+          src="/coverr-coding-sequences-9906-1080p.mp4"
+          // src="/coverr-sun-shining-over-the-ocean-2178-1080p.mp4"
           type="video/mp4"
         />
         Seu navegador não suporta vídeos.
@@ -93,6 +93,31 @@ const AppContent: React.FC = () => {
   return (
     <>
       <BackgroundVideo />
+      {/* <a
+        href="https://github.com/CiceroLino/CiceroLino"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: 'fixed',
+          bottom: '16px',
+          right: '16px',
+          zIndex: 100,
+          opacity: 0.3,
+          fontSize: '1.1rem',
+          color: styles.colors.text,
+          textDecoration: 'none',
+          background: styles.colors.surface,
+          borderRadius: '8px',
+          padding: '6px 14px',
+          boxShadow: styles.shadows.small,
+          transition: 'opacity 0.3s',
+        }}
+        onMouseEnter={e => (e.currentTarget.style.opacity = '1')}
+        onMouseLeave={e => (e.currentTarget.style.opacity = '0.3')}
+        aria-label="Ver código fonte deste site no GitHub"
+      >
+        Código deste site
+      </a> */}
       <div
         style={{
           backgroundColor: 'transparent',

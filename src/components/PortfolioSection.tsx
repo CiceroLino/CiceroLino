@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { getThemeStyles } from '../utils/styles';
-import { useGitHubRepos } from '../hooks/useGitHubRepos';
+import { usePortfolio } from '../hooks/usePortfolio';
 
 export const PortfolioSection: React.FC = () => {
   const { theme } = useTheme();
   const { t } = useTranslation();
   const styles = getThemeStyles(theme);
-  const { repos, loading, error } = useGitHubRepos();
+  const { projects, loading, error } = usePortfolio();
 
   if (loading) {
     return (
@@ -137,7 +137,7 @@ export const PortfolioSection: React.FC = () => {
         {t('portfolio.title')}
       </motion.h2>
 
-      {repos.length === 0 ? (
+      {projects.length === 0 ? (
         <div
           style={{
             display: 'flex',
@@ -163,7 +163,7 @@ export const PortfolioSection: React.FC = () => {
             width: '100%',
           }}
         >
-          {repos.map((repo, index) => (
+          {projects.map((repo, index) => (
             <motion.div
               key={repo.id}
               initial={{ opacity: 0, y: 50 }}
@@ -189,7 +189,7 @@ export const PortfolioSection: React.FC = () => {
                     marginBottom: '0.5rem',
                   }}
                 >
-                  {repo.name}
+                  {repo.title}
                 </h3>
                 <p
                   style={{
@@ -211,7 +211,7 @@ export const PortfolioSection: React.FC = () => {
                   marginBottom: '1rem',
                 }}
               >
-                {repo.topics?.slice(0, 3).map(topic => (
+                {repo.githubData?.topics?.slice(0, 3).map(topic => (
                   <span
                     key={topic}
                     style={{
@@ -246,17 +246,17 @@ export const PortfolioSection: React.FC = () => {
                 >
                   <span>
                     <i className="fas fa-star" style={{ marginRight: '0.25rem' }} />
-                    {repo.stargazers_count}
+                    {repo.githubData?.stargazers_count ?? 0}
                   </span>
                   <span>
                     <i className="fas fa-code-branch" style={{ marginRight: '0.25rem' }} />
-                    {repo.forks_count}
+                    {repo.githubData?.forks_count ?? 0}
                   </span>
                 </div>
 
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                   <motion.a
-                    href={repo.html_url}
+                    href={repo.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
@@ -271,6 +271,7 @@ export const PortfolioSection: React.FC = () => {
                       fontWeight: '500',
                       transition: styles.transitions.medium,
                     }}
+                    aria-label={`Abrir repositório ${repo.title} no GitHub`}
                     onMouseEnter={e => {
                       e.currentTarget.style.boxShadow = styles.shadows.small;
                     }}
@@ -280,9 +281,9 @@ export const PortfolioSection: React.FC = () => {
                   >
                     {t('portfolio.buttons.github')}
                   </motion.a>
-                  {repo.homepage && (
+                  {repo.live && (
                     <motion.a
-                      href={repo.homepage}
+                      href={repo.live}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
@@ -298,6 +299,7 @@ export const PortfolioSection: React.FC = () => {
                         border: `1px solid ${styles.colors.secondary}`,
                         transition: styles.transitions.medium,
                       }}
+                      aria-label={`Abrir demo do projeto ${repo.title}`}
                       onMouseEnter={e => {
                         e.currentTarget.style.backgroundColor = `${styles.colors.secondary}10`;
                       }}

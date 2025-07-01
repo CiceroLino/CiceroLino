@@ -15,6 +15,7 @@ export const Loader: React.FC = () => (
       background: 'rgba(0,0,0,0.7)',
       zIndex: 99999,
     }}
+    aria-label="Carregando conteúdo"
   >
     <motion.div
       animate={{ rotate: 360 }}

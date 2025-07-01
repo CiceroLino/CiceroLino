@@ -22,11 +22,15 @@ export const appConfig: AppConfig = {
   githubUsername: 'CiceroLino',
 
   portfolioRepos: [
-    'ecommerce-platform',
-    'task-management-api',
-    'portfolio-website',
-    'blog-api',
-    'dashboard-app',
+    'CiceroLino',
+    'audio-visualizer',
+    'examples',
+    'blockchain-lab',
+    // 'ecommerce-platform',
+    // 'task-management-api',
+    // 'portfolio-website',
+    // 'blog-api',
+    // 'dashboard-app',
   ],
 
   skills: [

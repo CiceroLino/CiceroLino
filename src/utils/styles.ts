@@ -7,7 +7,7 @@ export const getThemeStyles = (theme: Theme) => ({
     background: theme === 'dark' ? '#000000' : '#ffffff',
     surface: theme === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.95)',
     text: theme === 'dark' ? '#f5f5f5' : '#1a1a1a',
-    textSecondary: theme === 'dark' ? '#ccc' : '#444',
+    textSecondary: theme === 'dark' ? '#ccc' : '#ccc',
     border: theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.15)',
     overlay: theme === 'dark' ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.98)',
   },
