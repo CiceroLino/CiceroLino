@@ -4,15 +4,9 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { AboutSection } from './components/AboutSection';
 import { SkillsSection } from './components/SkillsSection';
-import { OpenSourceSection } from './components/OpenSourceSection';
-import { TimelineSection } from './components/TimelineSection';
 import { PortfolioSection } from './components/PortfolioSection';
-import { BlogSection } from './components/BlogSection';
 import { ContactSection } from './components/ContactSection';
-import { DownloadCV } from './components/DownloadCV';
-import { PresentationMode } from './components/PresentationMode';
 import { getThemeStyles } from './utils/styles';
 import { useTheme } from './contexts/ThemeContext';
 import './i18n';
@@ -138,16 +132,10 @@ const AppContent: React.FC = () => {
           }}
         >
           <HeroSection onSectionClick={handleSectionClick} />
-          <AboutSection />
           <SkillsSection />
-          <OpenSourceSection />
-          <TimelineSection />
           <PortfolioSection />
-          <BlogSection />
           <ContactSection />
         </main>
-        <DownloadCV />
-        <PresentationMode />
       </div>
     </>
   );

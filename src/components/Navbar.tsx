@@ -12,12 +12,7 @@ interface NavbarProps {
 
 const sections = [
   { id: 'hero', labelKey: 'nav.home' },
-  { id: 'about', labelKey: 'nav.about' },
-  { id: 'skills', labelKey: 'nav.skills' },
-  { id: 'opensource', labelKey: 'nav.opensource' },
-  { id: 'timeline', labelKey: 'nav.timeline' },
   { id: 'portfolio', labelKey: 'nav.portfolio' },
-  { id: 'blog', labelKey: 'nav.blog' },
   { id: 'contact', labelKey: 'nav.contact' },
 ];
 
