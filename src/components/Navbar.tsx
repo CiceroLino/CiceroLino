@@ -57,9 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSectionClick }) => {
           cursor: 'pointer',
         }}
         onClick={() => handleSectionClick('hero')}
-      >
-        CL
-      </div>
+      ></div>
 
       {/* Menu Desktop */}
       <div
