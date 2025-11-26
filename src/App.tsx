@@ -4,7 +4,6 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { SkillsSection } from './components/SkillsSection';
 import { PortfolioSection } from './components/PortfolioSection';
 import { ContactSection } from './components/ContactSection';
 import { getThemeStyles } from './utils/styles';
@@ -132,7 +131,6 @@ const AppContent: React.FC = () => {
           }}
         >
           <HeroSection onSectionClick={handleSectionClick} />
-          <SkillsSection />
           <PortfolioSection />
           <ContactSection />
         </main>
