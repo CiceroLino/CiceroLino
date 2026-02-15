@@ -21,11 +21,11 @@ export const CONTENT: Record<Language, LocalizedContent> = {
     cardDescription:
       'Software Engineer | React, Node, arquitetura full stack e entrega orientada a produto.',
     highlights: [
-      'Arquitetura escalavel com foco em manutencao',
-      'Do conceito ao deploy com ownership tecnico',
-      'Experiencias web performaticas e impactantes',
+      'Arquitetura escalável com foco em manutenção',
+      'Do conceito ao deploy com ownership técnico',
+      'Experiências web performáticas e impactantes',
     ],
-    ctaCode: 'Ver codigo',
+    ctaCode: 'Ver código',
     ctaContact: 'Falar comigo',
   },
   en: {

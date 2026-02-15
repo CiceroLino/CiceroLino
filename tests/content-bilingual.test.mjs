@@ -11,4 +11,8 @@ test('content includes pt and en dictionaries', () => {
   assert.match(contentFile, /ctaCode/);
   assert.match(contentFile, /ctaContact/);
   assert.match(contentFile, /https:\/\/www\.linkedin\.com\/in\/cicerolinoeneto\//);
+  assert.match(contentFile, /Ver código/);
+  assert.match(contentFile, /manutenção/);
+  assert.match(contentFile, /escalável/);
+  assert.match(contentFile, /Experiências/);
 });
