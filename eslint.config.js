@@ -23,6 +23,11 @@ export default tseslint.config(
         },
       },
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,
@@ -34,6 +39,8 @@ export default tseslint.config(
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
 
+      'no-unused-vars': 'off',
+      'react/react-in-jsx-scope': 'off',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },

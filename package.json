@@ -5,7 +5,7 @@
     "github": "https://github.com/CiceroLino"
   },
   "git": "https://github.com/CiceroLino/cicerolino.git",
-  "description": "Just a personal web page",
+  "description": "Personal landing page portfolio",
   "version": "0.1.0",
   "private": false,
   "type": "module",
@@ -16,34 +16,23 @@
     "lint:fix": "eslint . --fix",
     "preview": "vite preview",
     "prepare": "husky install",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
-    "framer-motion": "^12.19.2",
-    "i18next": "^25.2.1",
-    "i18next-browser-languagedetector": "^8.2.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-i18next": "^15.5.3",
-    "web-vitals": "^5.0.3"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.0",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.7",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^8.35.0",
     "@typescript-eslint/parser": "^8.35.0",
     "@vitejs/plugin-react": "^4.6.0",
-    "ajv": "^8.17.1",
     "eslint": "^9.30.0",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.5.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
