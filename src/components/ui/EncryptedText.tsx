@@ -15,8 +15,7 @@ export const EncryptedText = ({ text, className, durationMs = 900 }: EncryptedTe
   const [display, setDisplay] = useState(text);
 
   useEffect(() => {
-    if (!text) {
-      setDisplay('');
+    if (!text.length) {
       return;
     }
 
