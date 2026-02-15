@@ -7,7 +7,8 @@ test('content includes pt and en dictionaries', () => {
 
   assert.match(contentFile, /pt:\s*\{/);
   assert.match(contentFile, /en:\s*\{/);
-  assert.match(contentFile, /loaderSteps/);
+  assert.doesNotMatch(contentFile, /loaderSteps/);
   assert.match(contentFile, /ctaCode/);
   assert.match(contentFile, /ctaContact/);
+  assert.match(contentFile, /https:\/\/www\.linkedin\.com\/in\/cicerolinoeneto\//);
 });

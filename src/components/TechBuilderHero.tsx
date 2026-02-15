@@ -59,7 +59,12 @@ export const TechBuilderHero = ({ language, onLanguageChange }: TechBuilderHeroP
                 >
                   {content.ctaCode}
                 </a>
-                <a href={EXTERNAL_LINKS.contact} className="btn btn-solid">
+                <a
+                  href={EXTERNAL_LINKS.contact}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-solid"
+                >
                   {content.ctaContact}
                 </a>
               </CardItem>

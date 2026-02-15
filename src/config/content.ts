@@ -1,7 +1,6 @@
 export type Language = 'pt' | 'en';
 
 export type LocalizedContent = {
-  loaderSteps: string[];
   badge: string;
   heading: string;
   subtitle: string;
@@ -14,11 +13,6 @@ export type LocalizedContent = {
 
 export const CONTENT: Record<Language, LocalizedContent> = {
   pt: {
-    loaderSteps: [
-      'Inicializando stack de engenharia',
-      'Carregando contexto de produto',
-      'Sincronizando canal de contato',
-    ],
     badge: 'Tech Builder',
     heading: 'Engenheiro focado em construir produto real.',
     subtitle:
@@ -35,11 +29,6 @@ export const CONTENT: Record<Language, LocalizedContent> = {
     ctaContact: 'Falar comigo',
   },
   en: {
-    loaderSteps: [
-      'Booting engineering stack',
-      'Loading product context',
-      'Syncing contact channel',
-    ],
     badge: 'Tech Builder',
     heading: 'Engineer focused on building real products.',
     subtitle:
@@ -59,5 +48,5 @@ export const CONTENT: Record<Language, LocalizedContent> = {
 
 export const EXTERNAL_LINKS = {
   github: 'https://github.com/CiceroLino',
-  contact: 'mailto:contato@cicerolino.dev',
+  contact: 'https://www.linkedin.com/in/cicerolinoeneto/',
 } as const;
