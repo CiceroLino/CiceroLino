@@ -1,6 +1,6 @@
-import type { MouseEvent } from 'react';
 import projects from '../config/projects.json';
 import type { Language } from '../config/content';
+import { PinContainer } from './ui/3d-pin';
 
 type Project = {
   title: string;
@@ -16,16 +16,12 @@ const SECTION_COPY = {
   pt: {
     eyebrow: 'Portfólio',
     title: 'Projetos no ar',
-    livePinLabel: 'Live',
-    codePinLabel: 'Code',
     liveLabel: 'Abrir projeto',
     codeLabel: 'Ver código',
   },
   en: {
     eyebrow: 'Portfolio',
     title: 'Live projects',
-    livePinLabel: 'Live',
-    codePinLabel: 'Code',
     liveLabel: 'Open project',
     codeLabel: 'View code',
   },
@@ -38,12 +34,6 @@ type ProjectsSectionProps = {
 export const ProjectsSection = ({ language }: ProjectsSectionProps) => {
   const copy = SECTION_COPY[language];
 
-  const updatePointer = (event: MouseEvent<HTMLElement>) => {
-    const bounds = event.currentTarget.getBoundingClientRect();
-    event.currentTarget.style.setProperty('--pointer-x', `${event.clientX - bounds.left}px`);
-    event.currentTarget.style.setProperty('--pointer-y', `${event.clientY - bounds.top}px`);
-  };
-
   return (
     <section className="projects-section" aria-labelledby="projects-title">
       <div className="projects-inner">
@@ -54,19 +44,14 @@ export const ProjectsSection = ({ language }: ProjectsSectionProps) => {
 
         <div className="projects-grid">
           {PROJECTS.map(project => (
-            <article className="project-card" key={project.githubUrl} onMouseMove={updatePointer}>
-              <div className="project-card-content">
-                <a
-                  href={project.liveUrl ?? project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="project-pin-link"
-                  aria-label={project.liveUrl ? copy.liveLabel : copy.codeLabel}
-                >
-                  <span className="project-pin-stem" aria-hidden="true" />
-                  <span>{project.liveUrl ? copy.livePinLabel : copy.codePinLabel}</span>
-                </a>
-
+            <PinContainer
+              key={project.githubUrl}
+              href={project.liveUrl ?? project.githubUrl}
+              title={project.liveUrl ?? project.githubUrl}
+              containerClassName="project-pin-container"
+              className="project-pin-content"
+            >
+              <article className="project-card">
                 <div className="project-main">
                   <h3>{project.title}</h3>
                   <p className="project-description">{project.description}</p>
@@ -81,27 +66,12 @@ export const ProjectsSection = ({ language }: ProjectsSectionProps) => {
                 ) : null}
 
                 <div className="project-actions">
-                  {project.liveUrl ? (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn btn-solid"
-                    >
-                      {copy.liveLabel}
-                    </a>
-                  ) : null}
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-ghost"
-                  >
-                    {copy.codeLabel}
-                  </a>
+                  <span className="btn btn-solid">
+                    {project.liveUrl ? copy.liveLabel : copy.codeLabel}
+                  </span>
                 </div>
-              </div>
-            </article>
+              </article>
+            </PinContainer>
           ))}
         </div>
       </div>

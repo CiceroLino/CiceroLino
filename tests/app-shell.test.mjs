@@ -18,6 +18,9 @@ test('app shell renders hero directly without cinematic loader', () => {
   assert.match(appFile, /ProjectsSection/);
   assert.match(appFile, /<main className="app-shell">/);
   assert.match(heroFile, /hero-scroll-cue/);
-  assert.match(projectsFile, /project-pin-link/);
+  assert.match(projectsFile, /PinContainer/);
+  assert.match(projectsFile, /href=\{project\.liveUrl \?\? project\.githubUrl\}/);
+  assert.match(projectsFile, /title=\{project\.liveUrl \?\? project\.githubUrl\}/);
+  assert.doesNotMatch(projectsFile, /project-pin-link/);
   assert.doesNotMatch(projectsFile, /Para adicionar outro projeto/);
 });
