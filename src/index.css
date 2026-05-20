@@ -174,16 +174,19 @@ body {
 }
 
 .hero-scroll-cue {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 42px;
   color: var(--ink-1);
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-decoration: none;
   text-transform: uppercase;
+  transform: translateX(-50%);
 }
 
 .scroll-cue-line {
