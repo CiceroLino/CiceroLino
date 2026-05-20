@@ -325,6 +325,20 @@ body {
   min-height: 360px;
 }
 
+.project-pin-surface {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-heavy);
+  backdrop-filter: blur(10px);
+}
+
+.project-pin-title {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(9, 12, 20, 0.84);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
+}
+
 .project-card {
   position: relative;
   display: flex;
@@ -334,11 +348,11 @@ body {
   justify-content: space-between;
   gap: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 18px;
+  border: 1px solid transparent;
+  border-radius: 14px;
   background:
-    linear-gradient(135deg, rgba(125, 249, 207, 0.14), transparent 38%),
-    linear-gradient(160deg, rgba(255, 109, 95, 0.12), transparent 42%), rgba(10, 13, 21, 0.82);
+    linear-gradient(135deg, rgba(125, 249, 207, 0.1), transparent 38%),
+    linear-gradient(160deg, rgba(255, 109, 95, 0.08), transparent 42%), rgba(10, 13, 21, 0.18);
   padding: 24px;
 }
 
