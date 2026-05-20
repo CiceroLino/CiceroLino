@@ -25,6 +25,7 @@ test('app shell renders hero directly without cinematic loader', () => {
   assert.match(cssFile, /\.hero-scroll-cue\s*\{[\s\S]*position:\s*absolute/);
   assert.match(cssFile, /\.hero-scroll-cue\s*\{[\s\S]*left:\s*50%/);
   assert.match(cssFile, /\.hero-scroll-cue\s*\{[\s\S]*bottom:\s*24px/);
+  assert.match(cssFile, /scroll-behavior:\s*smooth/);
   assert.match(projectsFile, /PinContainer/);
   assert.match(projectsFile, /href=\{project\.liveUrl \?\? project\.githubUrl\}/);
   assert.match(projectsFile, /title=\{project\.liveUrl \?\? project\.githubUrl\}/);
