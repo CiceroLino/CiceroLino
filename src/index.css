@@ -323,7 +323,43 @@ body {
   padding: 24px;
 }
 
+.project-pin-link {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-0);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateZ(18px);
+}
+
+.project-pin-stem {
+  position: relative;
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand-1));
+}
+
+.project-pin-stem::after {
+  position: absolute;
+  top: -4px;
+  right: -1px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--brand-1);
+  box-shadow: 0 0 18px rgba(125, 249, 207, 0.62);
+  content: '';
+}
+
 .project-card h3 {
+  padding-right: 120px;
   margin: 0;
   font-size: clamp(1.55rem, 3vw, 2.15rem);
   line-height: 1.06;
@@ -363,6 +399,7 @@ body {
 .lang-toggle:focus-visible,
 .hero-scroll-cue:focus-visible,
 .btn:focus-visible,
+.project-pin-link:focus-visible,
 .project-card:focus-within {
   outline: 2px solid var(--brand-1);
   outline-offset: 2px;
@@ -385,6 +422,16 @@ body {
 
   .project-actions {
     flex-direction: column;
+  }
+
+  .project-pin-link {
+    position: static;
+    align-self: flex-start;
+    order: -1;
+  }
+
+  .project-card h3 {
+    padding-right: 0;
   }
 
   .hero-header {

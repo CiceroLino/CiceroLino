@@ -8,14 +8,18 @@ test('projects JSON includes Chronodex deploy metadata', () => {
     'utf8',
   );
   const projects = JSON.parse(projectsFile);
+  const chronodex = projects.find(project => project.title === 'chronodex');
+  const lifeRpg = projects.find(project => project.title === 'LifeRPG');
 
-  assert.equal(projects.length, 1);
-  assert.equal(projects[0].title, 'chronodex');
+  assert.equal(projects.length, 2);
   assert.equal(
-    projects[0].description,
+    chronodex.description,
     'A minimal radial time planner inspired by analog Chronodex diagrams and bullet journals.',
   );
-  assert.equal(projects[0].githubUrl, 'https://github.com/CiceroLino/chronodex');
-  assert.equal(projects[0].liveUrl, 'https://chronodex-planner.vercel.app/');
-  assert.deepEqual(projects[0].topics, ['react', 'vercel-deployment', 'vitejs']);
+  assert.equal(chronodex.githubUrl, 'https://github.com/CiceroLino/chronodex');
+  assert.equal(chronodex.liveUrl, 'https://chronodex-planner.vercel.app/');
+  assert.deepEqual(chronodex.topics, ['react', 'vercel-deployment', 'vitejs']);
+  assert.equal(lifeRpg.description, 'LifeRPG but more like game menu but in real life!');
+  assert.equal(lifeRpg.githubUrl, 'https://github.com/CiceroLino/LifeRPG');
+  assert.deepEqual(lifeRpg.topics, ['dart', 'flutter', 'liferpg', 'multiplatform']);
 });

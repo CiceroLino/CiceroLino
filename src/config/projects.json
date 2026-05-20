@@ -5,5 +5,11 @@
     "githubUrl": "https://github.com/CiceroLino/chronodex",
     "liveUrl": "https://chronodex-planner.vercel.app/",
     "topics": ["react", "vercel-deployment", "vitejs"]
+  },
+  {
+    "title": "LifeRPG",
+    "description": "LifeRPG but more like game menu but in real life!",
+    "githubUrl": "https://github.com/CiceroLino/LifeRPG",
+    "topics": ["dart", "flutter", "liferpg", "multiplatform"]
   }
 ]

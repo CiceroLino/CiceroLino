@@ -6,7 +6,7 @@ type Project = {
   title: string;
   description: string;
   githubUrl: string;
-  liveUrl: string;
+  liveUrl?: string;
   topics?: string[];
 };
 
@@ -16,12 +16,16 @@ const SECTION_COPY = {
   pt: {
     eyebrow: 'Portfólio',
     title: 'Projetos no ar',
+    livePinLabel: 'Live',
+    codePinLabel: 'Code',
     liveLabel: 'Abrir projeto',
     codeLabel: 'Ver código',
   },
   en: {
     eyebrow: 'Portfolio',
     title: 'Live projects',
+    livePinLabel: 'Live',
+    codePinLabel: 'Code',
     liveLabel: 'Open project',
     codeLabel: 'View code',
   },
@@ -52,6 +56,17 @@ export const ProjectsSection = ({ language }: ProjectsSectionProps) => {
           {PROJECTS.map(project => (
             <article className="project-card" key={project.githubUrl} onMouseMove={updatePointer}>
               <div className="project-card-content">
+                <a
+                  href={project.liveUrl ?? project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-pin-link"
+                  aria-label={project.liveUrl ? copy.liveLabel : copy.codeLabel}
+                >
+                  <span className="project-pin-stem" aria-hidden="true" />
+                  <span>{project.liveUrl ? copy.livePinLabel : copy.codePinLabel}</span>
+                </a>
+
                 <div className="project-main">
                   <h3>{project.title}</h3>
                   <p className="project-description">{project.description}</p>
@@ -66,14 +81,16 @@ export const ProjectsSection = ({ language }: ProjectsSectionProps) => {
                 ) : null}
 
                 <div className="project-actions">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-solid"
-                  >
-                    {copy.liveLabel}
-                  </a>
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-solid"
+                    >
+                      {copy.liveLabel}
+                    </a>
+                  ) : null}
                   <a
                     href={project.githubUrl}
                     target="_blank"
