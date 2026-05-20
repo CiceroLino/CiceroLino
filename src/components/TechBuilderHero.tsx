@@ -10,6 +10,7 @@ type TechBuilderHeroProps = {
 
 export const TechBuilderHero = ({ language, onLanguageChange }: TechBuilderHeroProps) => {
   const content = CONTENT[language];
+  const projectsLabel = language === 'pt' ? 'Projetos' : 'Projects';
 
   return (
     <LampContainer>
@@ -71,6 +72,11 @@ export const TechBuilderHero = ({ language, onLanguageChange }: TechBuilderHeroP
             </CardBody>
           </CardContainer>
         </div>
+
+        <a className="hero-scroll-cue" href="#projects-title" aria-label={projectsLabel}>
+          <span>{projectsLabel}</span>
+          <span aria-hidden="true" className="scroll-cue-line" />
+        </a>
       </div>
     </LampContainer>
   );

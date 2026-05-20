@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { Language } from './config/content';
 import { TechBuilderHero } from './components/TechBuilderHero';
+import { ProjectsSection } from './components/ProjectsSection';
 import { detectInitialLanguage, persistLanguage } from './utils/language';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <main className="app-shell">
       <TechBuilderHero language={language} onLanguageChange={onLanguageChange} />
+      <ProjectsSection language={language} />
     </main>
   );
 };

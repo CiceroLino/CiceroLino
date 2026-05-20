@@ -1,0 +1,9 @@
+[
+  {
+    "title": "chronodex",
+    "description": "A minimal radial time planner inspired by analog Chronodex diagrams and bullet journals.",
+    "githubUrl": "https://github.com/CiceroLino/chronodex",
+    "liveUrl": "https://chronodex-planner.vercel.app/",
+    "topics": ["react", "vercel-deployment", "vitejs"]
+  }
+]
