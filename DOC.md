@@ -1,39 +1,45 @@
-# Documentacao do Projeto
+# Documentação do projeto
 
-## Escopo Atual
+## Estrutura
 
-Landing page pessoal single-page com hero cinematográfico e narrativa `Tech builder`.
+A página mantém quatro áreas: apresentação, projetos selecionados, sobre e contato.
+`SiteHeader` oferece navegação por âncoras, troca de idioma e link para pular ao conteúdo.
+`App` mantém o idioma e sincroniza o título, a descrição e o idioma do documento.
 
-## Princípios
+O conteúdo de interface fica em `src/config/content.ts`. Os projetos e seus estudos
+de caso ficam em `src/config/projects.json`, com textos completos em PT/EN.
 
-- Impactante
-- Experimental
-- Direto ao ponto
-- Enxuto (sem peças desnecessárias)
+## Interação e acessibilidade
 
-## Componentes Utilizados
+- Links de aplicação e repositório são independentes e usam nomes visíveis.
+- Estudos de caso usam `details`/`summary`, acessíveis por teclado.
+- A preferência de idioma usa `localStorage`, com fallback se o navegador bloquear
+  o armazenamento ou atingir a cota.
+- O único efeito de inclinação usa um frame de animação por atualização, funciona
+  apenas com ponteiro preciso e respeita movimento reduzido.
+- O nome permanece visível desde a primeira renderização. A frase abaixo dele tem
+  digitação progressiva e reinicia ao trocar o idioma. O espaço completo é reservado
+  para evitar deslocamentos; leitores de tela recebem a frase inteira. Com movimento
+  reduzido, o texto aparece completo imediatamente, sem cursor animado.
+- Imagens têm dimensões reservadas, texto alternativo traduzido e carregamento tardio.
 
-Baseado nos componentes oficiais gratuitos do Aceternity UI:
+## Dependências
 
-- Encrypted Text
-- Multi Step Loader
-- 3D Card
-- Lamp Effect
+O npm e `package-lock.json` são a fonte da instalação reproduzível. O CLI do
+shadcn não é uma dependência da aplicação: o projeto não utiliza suas variantes
+CSS auxiliares. `components.json` permanece disponível para uso futuro do gerador.
+Motion e componentes antigos de pin/texto embaralhado foram removidos em favor
+de HTML semântico e CSS. O lint-staged 17 elimina a antiga cadeia de micromatch/braces.
 
-## Conteudo
+Na auditoria de 21/10/2026, o estado inicial apresentou 27 dependências afetadas
+no npm audit e 72 avisos únicos em 23 pacotes no OSV. Depois da atualização,
+ambos os scanners retornaram sem vulnerabilidades no lockfile entregue.
+Esses resultados são uma fotografia daquela verificação; `npm run audit` consulta
+os avisos atuais e também é executado no CI.
 
-Os textos ficam centralizados em `src/config/content.ts` com suporte PT/EN.
+## Validação
 
-## Idioma
-
-- Automático por `navigator.language`
-- Troca manual por botão PT/EN
-- Preferência persistida em `localStorage`
-
-## Verificacao
-
-```bash
-npm run test
-npm run lint
-npm run build
-```
+Consulte os comandos no [README](README.md). Testes de dados verificam os contratos
+de conteúdo e idioma; testes Playwright verificam o comportamento renderizado em
+Chromium desktop e mobile, inclusive as regressões encontradas na revisão inicial.
+As verificações de acessibilidade automatizadas complementam a inspeção manual.

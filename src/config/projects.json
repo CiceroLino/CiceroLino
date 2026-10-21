@@ -1,15 +1,53 @@
 [
   {
-    "title": "chronodex",
-    "description": "A minimal radial time planner inspired by analog Chronodex diagrams and bullet journals.",
+    "id": "chronodex",
+    "title": "Chronodex",
     "githubUrl": "https://github.com/CiceroLino/chronodex",
     "liveUrl": "https://chronodex-planner.vercel.app/",
-    "topics": ["react", "vercel-deployment", "vitejs"]
+    "image": "/images/chronodex.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1000,
+    "topics": ["React", "TypeScript", "SVG", "Tailwind CSS"],
+    "pt": {
+      "category": "Planejamento visual · Web",
+      "description": "Um planejador de tempo radial que transforma as horas do dia em blocos visuais, inspirado em diagramas Chronodex e bullet journals.",
+      "imageAlt": "Interface do Chronodex com anéis radiais de horas para planejar o dia.",
+      "problem": "Enxergar como o tempo do dia é distribuído, além de uma lista de tarefas.",
+      "implementation": "Interface em React e TypeScript, com visualização radial em SVG e persistência local no navegador.",
+      "result": "Planejamento em anéis AM/PM, categorias por cor, lembretes, temas claro e escuro e interface em quatro idiomas."
+    },
+    "en": {
+      "category": "Visual planning · Web",
+      "description": "A radial time planner that turns the hours of the day into visual blocks, inspired by Chronodex diagrams and bullet journals.",
+      "imageAlt": "Chronodex interface with radial hour rings for planning the day.",
+      "problem": "Seeing how time is distributed throughout the day, beyond a task list.",
+      "implementation": "A React and TypeScript interface with an SVG radial visualization and local browser persistence.",
+      "result": "AM/PM planning rings, color-coded categories, reminders, light and dark themes and an interface in four languages."
+    }
   },
   {
+    "id": "liferpg",
     "title": "LifeRPG",
-    "description": "LifeRPG but more like game menu but in real life!",
     "githubUrl": "https://github.com/CiceroLino/LifeRPG",
-    "topics": ["dart", "flutter", "liferpg", "multiplatform"]
+    "image": "/images/liferpg.webp",
+    "imageWidth": 1440,
+    "imageHeight": 1000,
+    "topics": ["Flutter", "Dart", "SQLite", "Provider"],
+    "pt": {
+      "category": "Produtividade · Multiplataforma",
+      "description": "Tarefas reais viram missões, habilidades e recompensas em uma experiência de RPG com dados armazenados no próprio dispositivo.",
+      "imageAlt": "Perfil do LifeRPG com nível, barras de XP e energia e controles de nome e avatar do personagem.",
+      "problem": "Conectar tarefas do cotidiano a uma sensação visível de progresso.",
+      "implementation": "Aplicativo em Flutter e Dart com dados locais em SQLite, separando interface, estado e regras de progressão.",
+      "result": "Missões com XP e moedas, evolução de habilidades, inventário, recompensas e sessões de foco com Pomodoro."
+    },
+    "en": {
+      "category": "Productivity · Cross-platform",
+      "description": "Real tasks become quests, skills and rewards in an RPG experience with data stored on your own device.",
+      "imageAlt": "LifeRPG profile showing level, XP and energy bars, and controls for character name and avatar.",
+      "problem": "Connecting everyday tasks to a visible sense of progress.",
+      "implementation": "A Flutter and Dart application with local SQLite data, separating the interface, state and progression rules.",
+      "result": "Quests with XP and coins, skill progression, inventory, rewards and Pomodoro focus sessions."
+    }
   }
 ]

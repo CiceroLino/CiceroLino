@@ -8,7 +8,7 @@ import prettier from 'eslint-config-prettier';
 import tsParser from '@typescript-eslint/parser';
 
 export default tseslint.config(
-  { ignores: ['build', 'dist', 'node_modules', '**/*.d.ts'] },
+  { ignores: ['build', 'dist', 'node_modules', 'test-results', 'playwright-report', '**/*.d.ts'] },
   {
     name: 'base-config',
     files: ['**/*.{ts,tsx}'],
@@ -43,6 +43,10 @@ export default tseslint.config(
       'react/react-in-jsx-scope': 'off',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
+  },
+  {
+    files: ['playwright.config.ts'],
+    languageOptions: { globals: globals.node },
   },
   prettier,
 );

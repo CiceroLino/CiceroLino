@@ -7,11 +7,15 @@ const isLanguage = (value: string | null): value is Language => {
 };
 
 export const detectInitialLanguage = (browserLanguage?: string): Language => {
-  if (typeof window !== 'undefined') {
-    const stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    if (isLanguage(stored)) {
-      return stored;
+  try {
+    if (typeof window !== 'undefined') {
+      const stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+      if (isLanguage(stored)) {
+        return stored;
+      }
     }
+  } catch {
+    // Browser privacy settings may block access to storage.
   }
 
   const normalized = (browserLanguage ?? '').toLowerCase();
@@ -23,5 +27,9 @@ export const persistLanguage = (language: Language) => {
     return;
   }
 
-  window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+  try {
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+  } catch {
+    // The selected language remains usable for the current session.
+  }
 };
